@@ -1,17 +1,17 @@
 const FLAVORS = [
-  { id: "vanilla", name: "Vanilla bean", blurb: "Speckled cake, smooth American buttercream.", allergens: "egg, milk, wheat", photo: "images/menu-b64/vanilla.b64" },
-  { id: "chocolate", name: "Dark chocolate", blurb: "Deep cocoa, same buttercream.", allergens: "egg, milk, wheat, soy", photo: "images/menu-b64/chocolate.b64" },
-  { id: "lemon", name: "Lemon with raspberry jam", blurb: "Lemon cake, cooked raspberry jam.", allergens: "egg, milk, wheat", photo: "images/menu-b64/lemon.b64" }
+  { id: "vanilla", name: "Vanilla bean", blurb: "Speckled cake, smooth American buttercream.", allergens: "egg, milk, wheat", photo: "images/vanilla.jpg" },
+  { id: "chocolate", name: "Dark chocolate", blurb: "Deep cocoa, same buttercream.", allergens: "egg, milk, wheat, soy", photo: "images/chocolate.jpg" },
+  { id: "lemon", name: "Lemon with raspberry jam", blurb: "Lemon cake, cooked raspberry jam.", allergens: "egg, milk, wheat", photo: "images/lemon.jpg" }
 ];
 const SIZES = [
   { id: "6", name: "6 inch", feeds: "8–10 slices", price: 75 },
   { id: "8", name: "8 inch", feeds: "12–16 slices", price: 115 }
 ];
 const FINISHES = [
-  { id: "plain", name: "Plain", blurb: "Smooth round, no extra icing story.", photo: "images/gallery-b64/069-drip.b64" },
-  { id: "birthday", name: "Birthday", blurb: "Same cake, festive finish.", photo: "images/gallery-b64/058-chocolate-birthday.b64" },
-  { id: "halloween", name: "Halloween", blurb: "Same cake, themed icing.", photo: "images/menu-b64/halloween.b64" },
-  { id: "fruit", name: "Pretend Fruit", blurb: "Piped or modeled fruit. Never fresh fruit.", photo: "images/gallery-b64/208-peach-roses.b64" }
+  { id: "plain", name: "Plain", blurb: "Smooth round, no extra icing story.", photo: "images/069-drip.jpg" },
+  { id: "birthday", name: "Birthday", blurb: "Same cake, festive finish.", photo: "images/058-chocolate-birthday.jpg" },
+  { id: "halloween", name: "Halloween", blurb: "Same cake, themed icing.", photo: "images/halloween.jpg" },
+  { id: "fruit", name: "Pretend Fruit", blurb: "Piped or modeled fruit. Never fresh fruit.", photo: "images/208-peach-roses.jpg" }
 ];
 
 const state = { flavor: null, size: null, finish: null, date: null, account: null };
@@ -85,7 +85,7 @@ function renderChoices() {
 }
 
 function choiceBtn(id, name, blurb, on, photo) {
-  const img = photo ? `<img data-b64="${photo}" alt="" />` : "";
+  const img = photo ? `<img src="${photo}" alt="" />` : "";
   return `<button class="choice ${on ? "selected" : ""}" type="button" data-id="${id}">${img}<span class="choice-copy"><b>${name}</b><small>${blurb}</small></span></button>`;
 }
 
