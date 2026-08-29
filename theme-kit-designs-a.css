@@ -1,0 +1,230 @@
+/* Look studio designs. Linked after theme-kit.css. */
+
+/* ------------------------------------------------------------------ */
+/* Designs                                                             */
+/* ------------------------------------------------------------------ */
+
+/* cream — warm bakery, wood grain, current split hero */
+html[data-theme="cream"] {
+  --font-serif: "Fraunces", "Iowan Old Style", serif;
+  --font-sans: "Figtree", "Avenir Next", sans-serif;
+  --font-display: "Fraunces", serif;
+  --radius: 1.6rem;
+  --radius-btn: 999px;
+  --radius-photo: 2rem;
+  --shadow: 0 22px 50px color-mix(in srgb, var(--chocolate) 14%, transparent);
+}
+html[data-theme="cream"] body {
+  background:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/></svg>"),
+    radial-gradient(1200px 500px at 10% -10%, color-mix(in srgb, var(--lemon) 42%, transparent), transparent 50%),
+    radial-gradient(900px 400px at 110% 8%, color-mix(in srgb, var(--raspberry) 14%, transparent), transparent 46%),
+    var(--cream);
+  background-blend-mode: overlay, normal, normal, normal;
+}
+html[data-theme="cream"] .hero {
+  grid-template-columns: 0.92fr 1.08fr;
+}
+
+/* cocoa — dark chocolate atelier, gold type, photo first */
+html[data-theme="cocoa"] {
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Figtree", "Avenir Next", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --radius: 0.35rem;
+  --radius-btn: 0.25rem;
+  --radius-photo: 0.2rem;
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+html[data-theme="cocoa"] body {
+  background:
+    radial-gradient(900px 500px at 80% -10%, color-mix(in srgb, var(--lemon) 16%, transparent), transparent 50%),
+    color-mix(in srgb, var(--chocolate) 88%, black);
+  color: var(--cream);
+}
+html[data-theme="cocoa"] .site-header {
+  background: color-mix(in srgb, var(--chocolate) 78%, black);
+  border-bottom: 1px solid color-mix(in srgb, var(--lemon) 28%, transparent);
+}
+html[data-theme="cocoa"] .logo,
+html[data-theme="cocoa"] h1,
+html[data-theme="cocoa"] h2,
+html[data-theme="cocoa"] h3,
+html[data-theme="cocoa"] .price {
+  color: var(--lemon);
+}
+html[data-theme="cocoa"] .logo span { color: var(--lemon); }
+html[data-theme="cocoa"] h1 em { color: var(--cream); font-style: italic; }
+html[data-theme="cocoa"] .lede,
+html[data-theme="cocoa"] .muted,
+html[data-theme="cocoa"] nav a,
+html[data-theme="cocoa"] .eyebrow,
+html[data-theme="cocoa"] footer {
+  color: color-mix(in srgb, var(--cream) 72%, var(--malt));
+}
+html[data-theme="cocoa"] .hero {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+html[data-theme="cocoa"] .hero-photo { order: -1; border: 1px solid color-mix(in srgb, var(--lemon) 35%, transparent); }
+html[data-theme="cocoa"] .menu-card,
+html[data-theme="cocoa"] .order-panel,
+html[data-theme="cocoa"] .shot,
+html[data-theme="cocoa"] .note,
+html[data-theme="cocoa"] .choice,
+html[data-theme="cocoa"] .confirm {
+  background: color-mix(in srgb, var(--chocolate) 55%, black);
+  color: var(--cream);
+  border-color: color-mix(in srgb, var(--lemon) 22%, transparent);
+}
+html[data-theme="cocoa"] .menu-card p,
+html[data-theme="cocoa"] .shot figcaption,
+html[data-theme="cocoa"] .hero-photo figcaption,
+html[data-theme="cocoa"] .choice small {
+  color: color-mix(in srgb, var(--cream) 70%, var(--malt));
+  background: transparent;
+}
+html[data-theme="cocoa"] .hero-photo figcaption { background: color-mix(in srgb, var(--chocolate) 70%, black); }
+html[data-theme="cocoa"] input,
+html[data-theme="cocoa"] select {
+  background: color-mix(in srgb, var(--chocolate) 40%, black);
+  color: var(--cream);
+  border-color: color-mix(in srgb, var(--lemon) 20%, transparent);
+}
+html[data-theme="cocoa"] .steps span { background: color-mix(in srgb, var(--chocolate) 40%, black); color: var(--cream); }
+html[data-theme="cocoa"] .steps span.on { background: var(--lemon); color: var(--chocolate); }
+html[data-theme="cocoa"] .btn { background: var(--lemon); color: var(--chocolate); }
+html[data-theme="cocoa"] .btn.ghost { background: transparent; color: var(--lemon); border-color: color-mix(in srgb, var(--lemon) 40%, transparent); }
+
+/* lemon — bright picnic, gingham, stacked and airy */
+html[data-theme="lemon"] {
+  --font-serif: "Fraunces", serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Fredoka", "Figtree", sans-serif;
+  --radius: 2.2rem;
+  --radius-btn: 999px;
+  --radius-photo: 2.6rem;
+}
+html[data-theme="lemon"] body {
+  background-color: var(--cream);
+  background-image:
+    repeating-linear-gradient(90deg, color-mix(in srgb, var(--lemon) 18%, transparent) 0 14px, transparent 14px 28px),
+    repeating-linear-gradient(0deg, color-mix(in srgb, var(--lemon) 16%, transparent) 0 14px, transparent 14px 28px);
+}
+html[data-theme="lemon"] .hero {
+  grid-template-columns: 1fr;
+  text-align: center;
+  gap: 1.6rem;
+  padding-top: 2.8rem;
+}
+html[data-theme="lemon"] .lede { margin-inline: auto; }
+html[data-theme="lemon"] .hero-actions { justify-content: center; }
+html[data-theme="lemon"] .hero-photo { max-width: 42rem; margin-inline: auto; }
+html[data-theme="lemon"] h1 em { color: var(--lemon); }
+
+/* editorial — magazine, huge type, white space, stacked */
+html[data-theme="editorial"] {
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Figtree", "Helvetica Neue", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --radius: 0;
+  --radius-btn: 0;
+  --radius-photo: 0;
+  --shadow: none;
+}
+html[data-theme="editorial"] body {
+  background: var(--paper);
+  color: var(--chocolate);
+}
+html[data-theme="editorial"] .site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--chocolate);
+}
+html[data-theme="editorial"] .logo {
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+html[data-theme="editorial"] .logo span { color: inherit; }
+html[data-theme="editorial"] .hero {
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  padding: 3.4rem 0 2.2rem;
+  border-bottom: 1px solid var(--chocolate);
+}
+html[data-theme="editorial"] h1 {
+  font-size: clamp(3.4rem, 11vw, 7.4rem);
+  line-height: 0.88;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  max-width: 18ch;
+}
+html[data-theme="editorial"] h2 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+}
+html[data-theme="editorial"] .eyebrow {
+  letter-spacing: 0.28em;
+  font-size: 0.64rem;
+}
+html[data-theme="editorial"] .hero-photo,
+html[data-theme="editorial"] .menu-card,
+html[data-theme="editorial"] .shot,
+html[data-theme="editorial"] .theme-shot,
+html[data-theme="editorial"] .order-panel {
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid var(--chocolate);
+  background: transparent;
+}
+html[data-theme="editorial"] .hero-photo figcaption,
+html[data-theme="editorial"] .shot figcaption {
+  font-family: var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  background: transparent;
+  border: 0;
+}
+html[data-theme="editorial"] .btn {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  box-shadow: none;
+}
+
+/* paris — dusty rose + sage, romantic, very round, split */
+html[data-theme="paris"] {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --radius: 2.8rem;
+  --radius-btn: 999px;
+  --radius-photo: 50% 2.8rem 50% 2.8rem / 12% 2.8rem 12% 2.8rem;
+  --shadow: 0 30px 60px color-mix(in srgb, var(--raspberry) 16%, transparent);
+}
+html[data-theme="paris"] body {
+  background:
+    radial-gradient(800px 500px at 0% 0%, color-mix(in srgb, var(--raspberry) 18%, transparent), transparent 55%),
+    radial-gradient(700px 400px at 100% 10%, color-mix(in srgb, var(--lemon) 18%, transparent), transparent 50%),
+    var(--cream);
+}
+html[data-theme="paris"] h1,
+html[data-theme="paris"] h2 {
+  font-style: italic;
+  font-weight: 500;
+}
+html[data-theme="paris"] .hero {
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;
+}
+html[data-theme="paris"] .hero-photo {
+  border: 6px solid var(--paper);
+}
+html[data-theme="paris"] .menu-card,
+html[data-theme="paris"] .shot,
+html[data-theme="paris"] .order-panel,
+html[data-theme="paris"] .note {
+  border-color: color-mix(in srgb, var(--raspberry) 22%, var(--line));
+}
+
