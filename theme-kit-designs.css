@@ -118,3 +118,5 @@ html[data-theme="lemon"] .lede { margin-inline: auto; }
 html[data-theme="lemon"] .hero-actions { justify-content: center; }
 html[data-theme="lemon"] .hero-photo { max-width: 42rem; margin-inline: auto; }
 html[data-theme="lemon"] h1 em { color: var(--lemon); }
+
+@import url("theme-kit-more.css");
