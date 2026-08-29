@@ -1,0 +1,103 @@
+/* neon — near-black, neon raspberry + lemon, inverted hero */
+html[data-theme="neon"] {
+  --font-serif: "Syne", "Figtree", sans-serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --radius: 0.4rem;
+  --radius-btn: 0.35rem;
+  --radius-photo: 0.4rem;
+  --shadow: 0 0 28px color-mix(in srgb, var(--raspberry) 55%, transparent);
+}
+html[data-theme="neon"] body {
+  background:
+    radial-gradient(600px 400px at 15% 10%, color-mix(in srgb, var(--raspberry) 28%, transparent), transparent 50%),
+    radial-gradient(700px 420px at 90% 0%, color-mix(in srgb, var(--lemon) 22%, transparent), transparent 52%),
+    color-mix(in srgb, var(--chocolate) 70%, #000);
+  color: var(--cream);
+}
+html[data-theme="neon"] .site-header {
+  background: color-mix(in srgb, #000 70%, var(--chocolate));
+  border-bottom: 1px solid color-mix(in srgb, var(--raspberry) 55%, transparent);
+}
+html[data-theme="neon"] .logo { color: var(--cream); }
+html[data-theme="neon"] .logo span {
+  color: var(--raspberry);
+  text-shadow: 0 0 16px var(--raspberry);
+}
+html[data-theme="neon"] h1,
+html[data-theme="neon"] h2 {
+  color: var(--cream);
+  letter-spacing: -0.05em;
+  font-weight: 800;
+}
+html[data-theme="neon"] h1 em {
+  color: var(--lemon);
+  font-style: normal;
+  text-shadow: 0 0 22px var(--lemon);
+}
+html[data-theme="neon"] .lede,
+html[data-theme="neon"] .muted,
+html[data-theme="neon"] nav a,
+html[data-theme="neon"] .eyebrow,
+html[data-theme="neon"] footer {
+  color: color-mix(in srgb, var(--cream) 70%, var(--malt));
+}
+html[data-theme="neon"] .hero {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+html[data-theme="neon"] .hero-photo {
+  mix-blend-mode: luminosity;
+  filter: contrast(1.08) saturate(0.7);
+  border: 1px solid color-mix(in srgb, var(--lemon) 50%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--raspberry) 35%, transparent);
+}
+html[data-theme="neon"] .hero-copy {
+  background: color-mix(in srgb, #000 45%, transparent);
+  padding: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--raspberry) 40%, transparent);
+}
+html[data-theme="neon"] .menu-card,
+html[data-theme="neon"] .order-panel,
+html[data-theme="neon"] .shot,
+html[data-theme="neon"] .note,
+html[data-theme="neon"] .choice {
+  background: color-mix(in srgb, #000 55%, var(--chocolate));
+  color: var(--cream);
+  border: 1px solid color-mix(in srgb, var(--raspberry) 40%, transparent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--raspberry) 18%, transparent);
+}
+html[data-theme="neon"] .menu-card p,
+html[data-theme="neon"] .shot figcaption,
+html[data-theme="neon"] .hero-photo figcaption,
+html[data-theme="neon"] .choice small {
+  color: color-mix(in srgb, var(--cream) 75%, var(--malt));
+  background: transparent;
+}
+html[data-theme="neon"] .hero-photo figcaption {
+  background: #000;
+}
+html[data-theme="neon"] .btn {
+  background: var(--raspberry);
+  color: #fff;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--raspberry) 55%, transparent);
+}
+html[data-theme="neon"] .btn.ghost {
+  background: transparent;
+  color: var(--lemon);
+  border: 1px solid var(--lemon);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--lemon) 35%, transparent);
+}
+html[data-theme="neon"] input,
+html[data-theme="neon"] select {
+  background: #0b0b0c;
+  color: var(--cream);
+  border-color: color-mix(in srgb, var(--lemon) 35%, transparent);
+}
+html[data-theme="neon"] .steps span.on {
+  background: var(--raspberry);
+  color: #fff;
+  box-shadow: 0 0 12px var(--raspberry);
+}
+
+@import url("theme-kit-more4.css");
