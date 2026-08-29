@@ -1,0 +1,262 @@
+/* Look studio + theme playground. Layers after styles.css. */
+
+:root {
+  --look-bar-h: 52px;
+  --radius: 1.6rem;
+  --radius-btn: 999px;
+  --radius-photo: 1.6rem;
+  --font-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-sans: "Figtree", "Avenir Next", "Segoe UI", sans-serif;
+  --font-display: "Fraunces", "Iowan Old Style", serif;
+}
+
+html {
+  scroll-padding-top: calc(var(--look-bar-h) + 4.2rem);
+  --icing: color-mix(in srgb, var(--paper) 82%, white);
+  --cocoa: color-mix(in srgb, var(--chocolate) 82%, black);
+  --lemon-soft: color-mix(in srgb, var(--lemon) 42%, var(--paper));
+  --butter: color-mix(in srgb, var(--lemon) 38%, var(--cream));
+  --line: color-mix(in srgb, var(--chocolate) 12%, transparent);
+  --shadow: 0 22px 50px color-mix(in srgb, var(--chocolate) 14%, transparent);
+}
+
+/* ------------------------------------------------------------------ */
+/* Toolbar — always a dark glass preview strip, independent of themes */
+/* ------------------------------------------------------------------ */
+#look-bar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(16, 15, 14, 0.92);
+  color: #f3ece3;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Figtree", "Avenir Next", "Segoe UI", sans-serif;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+#look-bar .look-bar-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.85rem;
+  padding: 0.42rem 0.85rem 0.5rem;
+  width: min(1400px, calc(100% - 0.4rem));
+  margin-inline: auto;
+}
+
+.look-bar-label {
+  margin: 0;
+  flex: 1 1 14rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: rgba(243, 236, 227, 0.88);
+  line-height: 1.35;
+  max-width: 22rem;
+}
+
+.look-bar-label strong {
+  display: block;
+  color: #f3ece3;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+.look-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.38rem 0.5rem;
+}
+
+.look-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.14rem;
+  margin: 0;
+}
+
+.look-field > span {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(243, 236, 227, 0.48);
+}
+
+#look-bar select,
+#look-bar button {
+  width: auto;
+  min-height: 2rem;
+  margin: 0;
+  padding: 0.28rem 0.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #1b1917;
+  color: #f3ece3;
+  font-size: 0.78rem;
+  line-height: 1.2;
+  box-shadow: none;
+}
+
+#look-bar select {
+  max-width: 11.5rem;
+  cursor: pointer;
+}
+
+#look-bar button#copy-look {
+  background: #f3ece3;
+  color: #161412;
+  border-color: #f3ece3;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.38rem 0.65rem;
+  cursor: pointer;
+}
+
+#look-bar button#copy-look:hover {
+  background: #fff;
+}
+
+#look-bar button#copy-look.is-copied {
+  background: #c5e4c0;
+}
+
+.logo-select-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+#look-logo-preview {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  background: #111;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex: 0 0 36px;
+}
+
+#look-logo-preview[hidden] { display: none; }
+
+.site-header {
+  top: var(--look-bar-h);
+  width: 100%;
+  max-width: none;
+  padding-inline: max(1rem, calc((100% - 1180px) / 2));
+}
+
+/* Logo strip in the shop header */
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+#brand-logo {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex: 0 0 36px;
+}
+
+#brand-logo[hidden] { display: none; }
+
+/* Apply radius tokens over hardcoded styles.css radii */
+.hero-photo,
+.menu-card,
+.theme-shot,
+.order-panel,
+.shot,
+.note,
+.choice,
+.confirm {
+  border-radius: var(--radius);
+}
+
+.btn { border-radius: var(--radius-btn); }
+.steps span,
+.pill { border-radius: var(--radius-btn); }
+
+input, select { border-radius: calc(var(--radius) * 0.55); }
+
+.hero-photo { border-radius: var(--radius-photo); overflow: hidden; }
+
+/* ------------------------------------------------------------------ */
+/* Palettes — only the six color tokens                                */
+/* ------------------------------------------------------------------ */
+html[data-palette="cream-cocoa"] {
+  --cream: #f4eadc;
+  --paper: #fff8ee;
+  --chocolate: #3b2417;
+  --malt: #7a5340;
+  --raspberry: #c45362;
+  --lemon: #e2bc3d;
+}
+
+html[data-palette="raspberry"] {
+  --cream: #f7e6ea;
+  --paper: #fff5f7;
+  --chocolate: #4a1824;
+  --malt: #8a4452;
+  --raspberry: #c45362;
+  --lemon: #e8b4c0;
+}
+
+html[data-palette="midnight"] {
+  --cream: #e6e4f0;
+  --paper: #f3f1fa;
+  --chocolate: #141225;
+  --malt: #5c5878;
+  --raspberry: #c47ba0;
+  --lemon: #e2c56a;
+}
+
+html[data-palette="lemon-butter"] {
+  --cream: #f6f0c4;
+  --paper: #fffbeb;
+  --chocolate: #3d3210;
+  --malt: #8a7430;
+  --raspberry: #d08a3a;
+  --lemon: #e2bc3d;
+}
+
+html[data-palette="sage"] {
+  --cream: #e6eee3;
+  --paper: #f3f7f0;
+  --chocolate: #243028;
+  --malt: #5d6f62;
+  --raspberry: #a86b6b;
+  --lemon: #c5c07a;
+}
+
+html[data-palette="blush"] {
+  --cream: #f6e6e4;
+  --paper: #fdf4f2;
+  --chocolate: #4a2c32;
+  --malt: #8b5e66;
+  --raspberry: #c47a88;
+  --lemon: #e8c4a8;
+}
+
+html[data-palette="ink"] {
+  --cream: #f1f1ee;
+  --paper: #fafafa;
+  --chocolate: #111111;
+  --malt: #555555;
+  --raspberry: #2a2a2a;
+  --lemon: #c8c8c4;
+}
+
+html[data-palette="teal-ink"] {
+  --cream: #e3eeec;
+  --paper: #f2f8f6;
+  --chocolate: #102422;
+  --malt: #3d5c58;
+  --raspberry: #2a7a72;
+  --lemon: #d4c07a;
+}
