@@ -1,0 +1,108 @@
+/* editorial — magazine, huge type, white space, stacked */
+html[data-theme="editorial"] {
+  --font-serif: "Playfair Display", "Times New Roman", serif;
+  --font-sans: "Figtree", "Helvetica Neue", sans-serif;
+  --font-display: "Playfair Display", serif;
+  --radius: 0;
+  --radius-btn: 0;
+  --radius-photo: 0;
+  --shadow: none;
+}
+html[data-theme="editorial"] body {
+  background: var(--paper);
+  color: var(--chocolate);
+}
+html[data-theme="editorial"] .site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--chocolate);
+}
+html[data-theme="editorial"] .logo {
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+html[data-theme="editorial"] .logo span { color: inherit; }
+html[data-theme="editorial"] .hero {
+  grid-template-columns: 1fr;
+  gap: 2.4rem;
+  padding: 3.4rem 0 2.2rem;
+  border-bottom: 1px solid var(--chocolate);
+}
+html[data-theme="editorial"] h1 {
+  font-size: clamp(3.4rem, 11vw, 7.4rem);
+  line-height: 0.88;
+  font-weight: 700;
+  letter-spacing: -0.055em;
+  max-width: 18ch;
+}
+html[data-theme="editorial"] h2 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 700;
+}
+html[data-theme="editorial"] .eyebrow {
+  letter-spacing: 0.28em;
+  font-size: 0.64rem;
+}
+html[data-theme="editorial"] .hero-photo,
+html[data-theme="editorial"] .menu-card,
+html[data-theme="editorial"] .shot,
+html[data-theme="editorial"] .theme-shot,
+html[data-theme="editorial"] .order-panel {
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid var(--chocolate);
+  background: transparent;
+}
+html[data-theme="editorial"] .hero-photo figcaption,
+html[data-theme="editorial"] .shot figcaption {
+  font-family: var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  background: transparent;
+  border: 0;
+}
+html[data-theme="editorial"] .btn {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  box-shadow: none;
+}
+
+/* paris — dusty rose + sage, romantic, very round, split */
+html[data-theme="paris"] {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Cormorant Garamond", serif;
+  --radius: 2.8rem;
+  --radius-btn: 999px;
+  --radius-photo: 50% 2.8rem 50% 2.8rem / 12% 2.8rem 12% 2.8rem;
+  --shadow: 0 30px 60px color-mix(in srgb, var(--raspberry) 16%, transparent);
+}
+html[data-theme="paris"] body {
+  background:
+    radial-gradient(800px 500px at 0% 0%, color-mix(in srgb, var(--raspberry) 18%, transparent), transparent 55%),
+    radial-gradient(700px 400px at 100% 10%, color-mix(in srgb, var(--lemon) 18%, transparent), transparent 50%),
+    var(--cream);
+}
+html[data-theme="paris"] h1,
+html[data-theme="paris"] h2 {
+  font-style: italic;
+  font-weight: 500;
+}
+html[data-theme="paris"] .hero {
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;
+}
+html[data-theme="paris"] .hero-photo {
+  border: 6px solid var(--paper);
+}
+html[data-theme="paris"] .menu-card,
+html[data-theme="paris"] .shot,
+html[data-theme="paris"] .order-panel,
+html[data-theme="paris"] .note {
+  border-color: color-mix(in srgb, var(--raspberry) 22%, var(--line));
+}
+
+@import url("theme-kit-more2.css");
