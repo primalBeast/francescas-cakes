@@ -1,0 +1,217 @@
+/* Look studio designs F: botanical nightmarket storybook matchbook parade */
+
+/* botanical — pressed-flower sides, no banner, editorial two-col, wide margins */
+html[data-theme='botanical']{
+  --font-serif:'Spectral',serif;
+  --font-sans:'Spectral',serif;
+  --font-display:'Spectral',serif;
+  --radius:.2rem;--radius-btn:999px;--radius-photo:.4rem;--shadow:none;
+}
+html[data-theme='botanical'] body{background:var(--paper)}
+html[data-theme='botanical'] .wrap{width:min(900px,calc(100% - 7.5rem))}
+html[data-theme='botanical'] .layout-rail,html[data-theme='botanical'] .layout-stamp{
+  display:block;position:fixed;top:calc(var(--look-bar-h) + 3.5rem);width:2.8rem;bottom:3rem;z-index:4;opacity:.7;
+  background-image:
+    radial-gradient(circle at 50% 8%,var(--raspberry) 5px,transparent 6px),
+    radial-gradient(circle at 30% 18%,var(--lemon) 4px,transparent 5px),
+    radial-gradient(circle at 70% 28%,color-mix(in srgb,var(--malt) 70%,var(--raspberry)) 3px,transparent 4px),
+    radial-gradient(circle at 40% 42%,var(--raspberry) 5px,transparent 6px),
+    radial-gradient(circle at 65% 55%,var(--lemon) 4px,transparent 5px),
+    radial-gradient(circle at 35% 70%,var(--malt) 5px,transparent 6px),
+    radial-gradient(circle at 60% 84%,var(--raspberry) 4px,transparent 5px);
+}
+html[data-theme='botanical'] .layout-rail{left:.45rem}
+html[data-theme='botanical'] .layout-stamp{right:.45rem}
+html[data-theme='botanical'] .site-header{background:transparent;border-bottom:0;padding:1.6rem 0 .6rem}
+html[data-theme='botanical'] .logo{font-style:italic;font-weight:400;letter-spacing:.02em}
+html[data-theme='botanical'] .hero{grid-template-columns:1.05fr .95fr;gap:2.6rem;padding:2.2rem 0}
+html[data-theme='botanical'] h1{font-weight:400;font-style:italic;line-height:1.05}
+html[data-theme='botanical'] .hero-photo{border:0;box-shadow:none}
+html[data-theme='botanical'] .menu-card,html[data-theme='botanical'] .shot,html[data-theme='botanical'] .order-panel,html[data-theme='botanical'] .note{background:transparent;border:0;box-shadow:none}
+html[data-theme='botanical'] .menu-card img{height:15rem}
+html[data-theme='botanical'] footer{border-top:0;text-align:center;font-style:italic}
+html[data-theme='botanical'] footer::before{content:'';display:block;width:8rem;height:1px;background:var(--malt);margin:0 auto 1rem}
+
+/* nightmarket — hanging lanterns, dark, stacked, glow type */
+html[data-theme='nightmarket']{
+  --font-serif:'Bungee',sans-serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Bungee',sans-serif;
+  --radius:.5rem;--radius-btn:.4rem;--radius-photo:.5rem;
+  --shadow:0 0 24px color-mix(in srgb,var(--lemon) 35%,transparent);
+}
+html[data-theme='nightmarket'] body{
+  background:
+    radial-gradient(700px 420px at 50% -10%,color-mix(in srgb,var(--lemon) 18%,transparent),transparent 50%),
+    color-mix(in srgb,var(--chocolate) 86%,#000);
+  color:var(--cream);
+}
+html[data-theme='nightmarket'] .shop-banner{
+  display:flex;justify-content:space-around;align-items:flex-end;background:transparent;height:4.2rem;padding:0 1rem;
+}
+html[data-theme='nightmarket'] .shop-banner i{
+  display:block;width:1.7rem;height:2.3rem;border-radius:50% 50% 42% 42%;position:relative;
+  background:var(--lemon);box-shadow:0 0 18px var(--lemon);margin-top:.6rem;
+}
+html[data-theme='nightmarket'] .shop-banner i:nth-child(even){background:var(--raspberry);box-shadow:0 0 18px var(--raspberry);height:1.9rem;width:1.45rem}
+html[data-theme='nightmarket'] .shop-banner i:nth-child(3n){background:var(--cream);box-shadow:0 0 14px var(--cream)}
+html[data-theme='nightmarket'] .shop-banner i::before{
+  content:'';position:absolute;top:-10px;left:50%;width:1px;height:10px;background:var(--lemon);transform:translateX(-50%);
+}
+html[data-theme='nightmarket'] .site-header{background:transparent;border-bottom:1px solid color-mix(in srgb,var(--lemon) 28%,transparent)}
+html[data-theme='nightmarket'] .logo,html[data-theme='nightmarket'] h1,html[data-theme='nightmarket'] h2,html[data-theme='nightmarket'] h3{color:var(--lemon);text-shadow:0 0 18px color-mix(in srgb,var(--lemon) 55%,transparent)}
+html[data-theme='nightmarket'] .logo span{color:var(--raspberry);text-shadow:0 0 12px var(--raspberry)}
+html[data-theme='nightmarket'] h1 em{color:var(--cream);font-style:normal}
+html[data-theme='nightmarket'] nav a,html[data-theme='nightmarket'] .lede,html[data-theme='nightmarket'] .muted,html[data-theme='nightmarket'] .eyebrow,html[data-theme='nightmarket'] footer{color:color-mix(in srgb,var(--cream) 78%,var(--lemon))}
+html[data-theme='nightmarket'] .hero{grid-template-columns:1fr;text-align:center;gap:1.3rem}
+html[data-theme='nightmarket'] .lede,html[data-theme='nightmarket'] .hero-actions{margin-inline:auto;justify-content:center}
+html[data-theme='nightmarket'] .hero-photo{max-width:26rem;margin-inline:auto;border:1px solid color-mix(in srgb,var(--lemon) 40%,transparent);box-shadow:0 0 28px color-mix(in srgb,var(--lemon) 25%,transparent)}
+html[data-theme='nightmarket'] .menu-grid{grid-template-columns:1fr;max-width:28rem;margin-inline:auto}
+html[data-theme='nightmarket'] .menu-card,html[data-theme='nightmarket'] .order-panel,html[data-theme='nightmarket'] .shot,html[data-theme='nightmarket'] .note,html[data-theme='nightmarket'] .choice{
+  background:color-mix(in srgb,#000 55%,var(--chocolate));color:var(--cream);
+  border:1px solid color-mix(in srgb,var(--lemon) 30%,transparent);
+}
+html[data-theme='nightmarket'] .menu-card p,html[data-theme='nightmarket'] .shot figcaption,html[data-theme='nightmarket'] .hero-photo figcaption{color:color-mix(in srgb,var(--cream) 75%,var(--malt));background:transparent}
+html[data-theme='nightmarket'] .btn{background:var(--lemon);color:var(--chocolate);box-shadow:0 0 16px color-mix(in srgb,var(--lemon) 40%,transparent)}
+html[data-theme='nightmarket'] .btn.ghost{color:var(--lemon);border-color:var(--lemon);background:transparent}
+html[data-theme='nightmarket'] input,html[data-theme='nightmarket'] select{background:#0c0c0e;color:var(--cream);border-color:color-mix(in srgb,var(--lemon) 30%,transparent)}
+html[data-theme='nightmarket'] footer{text-align:center;border-top:1px solid color-mix(in srgb,var(--lemon) 25%,transparent)}
+
+/* storybook — chapter banner, drop-caps, illustrated margins */
+html[data-theme='storybook']{
+  --font-serif:'IM Fell English',serif;
+  --font-sans:'IM Fell English',serif;
+  --font-display:'IM Fell English',serif;
+  --radius:.3rem;--radius-btn:.3rem;--radius-photo:.6rem;
+}
+html[data-theme='storybook'] body{background:color-mix(in srgb,var(--cream) 80%,var(--paper))}
+html[data-theme='storybook'] .wrap{width:min(760px,calc(100% - 5.5rem))}
+html[data-theme='storybook'] .shop-banner{
+  display:flex;justify-content:center;align-items:center;background:transparent;
+  border-top:2px solid var(--chocolate);border-bottom:2px solid var(--chocolate);padding:.55rem;margin:.4rem 12% 0;
+}
+html[data-theme='storybook'] .shop-banner-label{display:block;font-style:italic;letter-spacing:.22em;text-transform:uppercase;font-size:.78rem}
+html[data-theme='storybook'] .shop-banner-label::before{content:'Chapter one'}
+html[data-theme='storybook'] .layout-rail,html[data-theme='storybook'] .layout-stamp{
+  display:block;position:fixed;top:calc(var(--look-bar-h) + 5rem);width:2.2rem;height:62vh;opacity:.5;z-index:4;
+  background-image:
+    radial-gradient(circle at 50% 6%,var(--raspberry) 3px,transparent 4px),
+    radial-gradient(circle at 40% 22%,var(--malt) 2px,transparent 3px),
+    radial-gradient(circle at 60% 40%,var(--lemon) 3px,transparent 4px),
+    radial-gradient(circle at 35% 62%,var(--raspberry) 2px,transparent 3px),
+    radial-gradient(circle at 65% 82%,var(--malt) 3px,transparent 4px);
+}
+html[data-theme='storybook'] .layout-rail{left:.7rem}
+html[data-theme='storybook'] .layout-stamp{right:.7rem}
+html[data-theme='storybook'] .site-header{background:transparent;border:0;justify-content:center;padding:1.2rem 0 .4rem}
+html[data-theme='storybook'] .hero{grid-template-columns:1fr;padding:1.2rem 0 2rem}
+html[data-theme='storybook'] h1{font-size:clamp(2.1rem,5vw,3.2rem);font-weight:400}
+html[data-theme='storybook'] .lede::first-letter{
+  float:left;font-size:3.5rem;line-height:.75;padding:.12rem .4rem 0 0;color:var(--raspberry);font-family:var(--font-display);
+}
+html[data-theme='storybook'] .hero-photo{max-width:24rem;margin-inline:auto;border:8px solid var(--paper);box-shadow:0 10px 24px color-mix(in srgb,var(--chocolate) 12%,transparent)}
+html[data-theme='storybook'] .menu-grid{grid-template-columns:1fr;gap:1.4rem}
+html[data-theme='storybook'] .menu-card{background:transparent;border:0;box-shadow:none;flex-direction:row}
+html[data-theme='storybook'] .menu-card img{width:7rem;height:7rem;flex:0 0 7rem;border-radius:50%}
+html[data-theme='storybook'] .section h2::before{content:'\00B6  ';opacity:.45}
+html[data-theme='storybook'] footer{text-align:center;border:0;font-style:italic}
+html[data-theme='storybook'] footer::before{content:'The end  \00B7  ';font-style:italic}
+
+/* matchbook — tiny cover header, full-bleed photo band, then copy */
+html[data-theme='matchbook']{
+  --font-serif:'Bebas Neue',sans-serif;
+  --font-sans:'IBM Plex Mono',monospace;
+  --font-display:'Bebas Neue',sans-serif;
+  --radius:0;--radius-btn:0;--radius-photo:0;--shadow:none;
+}
+html[data-theme='matchbook'] body{background:var(--chocolate);color:var(--cream)}
+html[data-theme='matchbook'] .shop-banner{display:block;height:3px;background:var(--lemon)}
+html[data-theme='matchbook'] .site-header{
+  background:var(--chocolate);border:0;justify-content:center;gap:.7rem;padding:.28rem 0 .32rem;
+}
+html[data-theme='matchbook'] .logo{font-size:.82rem;letter-spacing:.28em;text-transform:uppercase;color:var(--cream)}
+html[data-theme='matchbook'] .logo span{color:var(--lemon)}
+html[data-theme='matchbook'] nav{gap:.65rem;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase}
+html[data-theme='matchbook'] nav a{color:var(--cream)}
+html[data-theme='matchbook'] .hero{
+  display:flex;flex-direction:column;gap:0;padding:0;width:100%;max-width:none;
+}
+html[data-theme='matchbook'] .hero.wrap{width:100%}
+html[data-theme='matchbook'] .hero-photo{order:-1;border:0;border-radius:0}
+html[data-theme='matchbook'] .hero-photo img{height:22rem}
+html[data-theme='matchbook'] .hero-photo figcaption{display:none}
+html[data-theme='matchbook'] .hero-copy{
+  padding:1.8rem max(1rem,calc((100% - 42rem)/2)) 2rem;background:var(--cream);color:var(--chocolate);
+}
+html[data-theme='matchbook'] .hero-copy h1,html[data-theme='matchbook'] .hero-copy .lede,html[data-theme='matchbook'] .hero-copy .eyebrow{color:var(--chocolate)}
+html[data-theme='matchbook'] h1{letter-spacing:.06em;text-transform:uppercase}
+html[data-theme='matchbook'] .section{padding-inline:max(1rem,calc((100% - 42rem)/2))}
+html[data-theme='matchbook'] .menu-grid{gap:.4rem}
+html[data-theme='matchbook'] .menu-card,html[data-theme='matchbook'] .order-panel,html[data-theme='matchbook'] .shot,html[data-theme='matchbook'] .note,html[data-theme='matchbook'] .choice{background:var(--paper);color:var(--chocolate);border:0}
+html[data-theme='matchbook'] h2,html[data-theme='matchbook'] h3{color:var(--cream)}
+html[data-theme='matchbook'] .section h2{color:var(--cream)}
+html[data-theme='matchbook'] .muted,html[data-theme='matchbook'] .eyebrow{color:color-mix(in srgb,var(--cream) 70%,var(--malt))}
+html[data-theme='matchbook'] .menu-card h3,html[data-theme='matchbook'] .order-panel h3,html[data-theme='matchbook'] .shot figcaption{color:var(--chocolate)}
+html[data-theme='matchbook'] .btn{background:var(--lemon);color:var(--chocolate);letter-spacing:.12em;text-transform:uppercase}
+html[data-theme='matchbook'] footer{background:var(--lemon);color:var(--chocolate);border:0;text-align:center;letter-spacing:.18em;text-transform:uppercase;font-size:.7rem}
+
+/* parade — marching bands: color, photo, type, repeating */
+html[data-theme='parade']{
+  --font-serif:'Bungee',sans-serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Bungee',sans-serif;
+  --radius:0;--radius-btn:0;--radius-photo:0;--shadow:none;
+}
+html[data-theme='parade'] body{background:var(--cream)}
+html[data-theme='parade'] .shop-banner{
+  display:block;height:2.3rem;
+  background:repeating-linear-gradient(90deg,var(--lemon) 0 36px,var(--raspberry) 36px 72px,var(--chocolate) 72px 108px);
+}
+html[data-theme='parade'] .shop-banner-2{display:block;height:.55rem;background:var(--chocolate)}
+html[data-theme='parade'] .site-header{
+  background:var(--raspberry);border:0;color:var(--paper);padding:.7rem 0;
+}
+html[data-theme='parade'] .logo,html[data-theme='parade'] nav a{color:var(--paper)}
+html[data-theme='parade'] .logo span{color:var(--lemon)}
+html[data-theme='parade'] .hero{
+  display:flex;flex-direction:column;gap:0;padding:0;width:100%;max-width:none;
+}
+html[data-theme='parade'] .hero.wrap{width:100%}
+html[data-theme='parade'] .hero-photo{order:-1;border:0}
+html[data-theme='parade'] .hero-photo img{height:18rem}
+html[data-theme='parade'] .hero-photo figcaption{display:none}
+html[data-theme='parade'] .hero-copy{
+  background:var(--chocolate);color:var(--paper);padding:1.8rem 1.2rem 2rem;text-align:center;
+}
+html[data-theme='parade'] .hero-copy h1,html[data-theme='parade'] .hero-copy .lede,html[data-theme='parade'] .hero-copy .eyebrow{color:var(--paper)}
+html[data-theme='parade'] h1 em{color:var(--lemon)}
+html[data-theme='parade'] .hero-actions{justify-content:center}
+html[data-theme='parade'] .section.wrap,html[data-theme='parade'] footer.wrap{width:100%;max-width:none}
+html[data-theme='parade'] .section{padding:0}
+html[data-theme='parade'] .section > .eyebrow,html[data-theme='parade'] .section > h2,html[data-theme='parade'] .section > .muted{
+  padding:.8rem 1.2rem 0;background:var(--lemon);color:var(--chocolate);margin:0;
+}
+html[data-theme='parade'] .section > h2{padding-bottom:.4rem}
+html[data-theme='parade'] .section > .muted{padding-bottom:.8rem}
+html[data-theme='parade'] .menu-grid{display:flex;flex-direction:column;gap:0;margin:0}
+html[data-theme='parade'] .menu-card{
+  flex-direction:row;border:0;border-bottom:6px solid var(--chocolate);background:var(--paper);
+}
+html[data-theme='parade'] .menu-card:nth-child(2n){background:var(--cream)}
+html[data-theme='parade'] .menu-card img{width:38%;height:9.5rem;flex:0 0 38%}
+html[data-theme='parade'] .theme-grid,html[data-theme='parade'] .mosaic{gap:0;margin:0}
+html[data-theme='parade'] .theme-shot,html[data-theme='parade'] .shot{border-radius:0;border:0}
+html[data-theme='parade'] .btn{background:var(--lemon);color:var(--chocolate);text-transform:uppercase;letter-spacing:.08em}
+html[data-theme='parade'] footer{background:var(--raspberry);color:var(--paper);border:0;text-align:center;padding:1.4rem}
+html[data-theme='parade'] #order{background:var(--paper);padding:1.2rem}
+html[data-theme='parade'] .order-panel{border:0;border-top:8px solid var(--chocolate)}
+
+@media (max-width:840px){
+  html[data-theme='botanical'] .hero,html[data-theme='nightmarket'] .hero,html[data-theme='storybook'] .hero{grid-template-columns:1fr}
+  html[data-theme='botanical'] .wrap{width:min(900px,calc(100% - 2rem))}
+  html[data-theme='botanical'] .layout-rail,html[data-theme='botanical'] .layout-stamp,html[data-theme='storybook'] .layout-rail,html[data-theme='storybook'] .layout-stamp{display:none}
+  html[data-theme='matchbook'] .hero-photo img{height:16rem}
+  html[data-theme='storybook'] .menu-card{flex-direction:column}
+  html[data-theme='parade'] .menu-card{flex-direction:column}
+  html[data-theme='parade'] .menu-card img{width:100%;flex-basis:auto;height:11rem}
+}
