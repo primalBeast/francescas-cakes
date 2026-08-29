@@ -116,7 +116,7 @@ html[data-theme='ticket'] .menu-card img{width:4.2rem;height:4.2rem;flex:0 0 4.2
 html[data-theme='ticket'] .menu-card:hover{transform:none}
 html[data-theme='ticket'] .order-panel{border:1px dashed var(--chocolate);box-shadow:none;max-width:32rem}
 html[data-theme='ticket'] .mosaic{grid-template-columns:1fr 1fr;max-width:32rem}
-html[data-theme='ticket'] .shot.wide,.shot.tall{grid-column:auto}
+html[data-theme='ticket'] .shot.wide,html[data-theme='ticket'] .shot.tall{grid-column:auto}
 html[data-theme='ticket'] footer{
   max-width:32rem;margin:0 auto;text-align:center;border-top:2px dashed var(--chocolate);
   font-family:'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;
