@@ -14,41 +14,81 @@
     <a class="logo" href="#top">Francesca’s <span>Cakes</span></a>
     <nav>
       <a href="#order">Order</a>
+      <a href="#cakes">The three</a>
       <a href="#gallery">Gallery</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
     </nav>
   </header>
 
   <main id="top">
     <section class="hero wrap">
-      <div>
+      <div class="hero-copy">
         <p class="eyebrow">London, Ontario · baker-led</p>
         <h1>Little cakes,<br>made <em>on purpose</em>.</h1>
-        <p class="lede">Three cakes. Two sizes. A finish if you want a birthday, Halloween, or pretend fruit. Smooth American buttercream, no fondant on the order menu.</p>
+        <p class="lede">Three cakes. Two sizes. A finish if you want a birthday, Halloween, or pretend fruit. Smooth American buttercream. Photos here are Imagine stills until Francesca’s kitchen shots land.</p>
         <div class="hero-actions">
           <a class="btn" href="#order" data-start>Order a cake</a>
-          <a class="btn ghost" href="#portfolio">See sculpted work</a>
+          <a class="btn ghost" href="#gallery">Look around</a>
         </div>
       </div>
-      <aside class="hero-card" aria-label="Starter cakes">
-        <p class="eyebrow">The three</p>
-        <div class="cake-stack">
-          <div class="cake-mini"><span class="swatch vanilla"></span><div><strong>Vanilla bean</strong><small>6″ $75 · 8″ $115</small></div></div>
-          <div class="cake-mini"><span class="swatch chocolate"></span><div><strong>Dark chocolate</strong><small>6″ $75 · 8″ $115</small></div></div>
-          <div class="cake-mini"><span class="swatch lemon"></span><div><strong>Lemon · raspberry jam</strong><small>6″ $75 · 8″ $115</small></div></div>
-        </div>
-      </aside>
+      <figure class="hero-photo">
+        <img data-b64="images/menu-b64/hero.b64" alt="Cream cake with piped peach roses" />
+        <figcaption>Imagine still · style, not a fourth cake</figcaption>
+      </figure>
+    </section>
+
+    <section class="section wrap" id="cakes">
+      <p class="eyebrow">The menu</p>
+      <h2>Vanilla, chocolate, lemon.</h2>
+      <p class="muted">6″ $75 · 8″ $115. Whole ticket. Imagine photos until the real ones are shot.</p>
+      <div class="menu-grid">
+        <a class="menu-card" href="#order" data-start>
+          <img data-b64="images/menu-b64/vanilla.b64" alt="Vanilla bean cake with cream buttercream" />
+          <div>
+            <p class="eyebrow">Vanilla bean</p>
+            <h3>Speckled cream</h3>
+            <p>Smooth American buttercream. 6″ $75 · 8″ $115</p>
+          </div>
+        </a>
+        <a class="menu-card" href="#order" data-start>
+          <img data-b64="images/menu-b64/chocolate.b64" alt="Dark chocolate cake with cocoa buttercream" />
+          <div>
+            <p class="eyebrow">Dark chocolate</p>
+            <h3>Deep cocoa</h3>
+            <p>Same buttercream. Soy may be in the chocolate. 6″ $75 · 8″ $115</p>
+          </div>
+        </a>
+        <a class="menu-card" href="#order" data-start>
+          <img data-b64="images/menu-b64/lemon.b64" alt="Lemon cake with raspberry piped icing" />
+          <div>
+            <p class="eyebrow">Lemon · raspberry jam</p>
+            <h3>Bright, then jam</h3>
+            <p>Piped raspberry icing, never fresh fruit. 6″ $75 · 8″ $115</p>
+          </div>
+        </a>
+      </div>
     </section>
 
     <section class="section wrap" id="themes">
       <p class="eyebrow">Finishes, not extra flavors</p>
       <h2>Pick a mood. Same cake.</h2>
-      <div class="themes">
-        <a class="theme-card plain" href="#order" data-start="plain"><strong>Plain</strong><p>Smooth round. The everyday cake.</p></a>
-        <a class="theme-card birthday" href="#order" data-start="birthday"><strong>Birthday</strong><p>Same vanilla, chocolate, or lemon. Festive icing.</p></a>
-        <a class="theme-card halloween" href="#order" data-start="halloween"><strong>Halloween</strong><p>Themed icing on a 6″ or 8″. Not a new SKU.</p></a>
-        <a class="theme-card fruit" href="#order" data-start="fruit"><strong>Pretend Fruit</strong><p>Piped or modeled. Never fresh fruit.</p></a>
+      <div class="theme-grid">
+        <a class="theme-shot" href="#order" data-start="plain">
+          <img data-b64="images/gallery-b64/069-drip.b64" alt="Smooth cake with a chocolate drip" />
+          <span><strong>Plain</strong> Smooth round. The everyday cake.</span>
+        </a>
+        <a class="theme-shot" href="#order" data-start="birthday">
+          <img data-b64="images/gallery-b64/058-chocolate-birthday.b64" alt="Chocolate birthday cake" />
+          <span><strong>Birthday</strong> Same three flavors. Festive icing.</span>
+        </a>
+        <a class="theme-shot" href="#order" data-start="halloween">
+          <img data-b64="images/menu-b64/halloween.b64" alt="Halloween finish on a chocolate cake" />
+          <span><strong>Halloween</strong> Themed icing, not a new SKU.</span>
+        </a>
+        <a class="theme-shot" href="#order" data-start="fruit">
+          <img data-b64="images/gallery-b64/208-peach-roses.b64" alt="Piped peach roses on a cream cake" />
+          <span><strong>Pretend Fruit</strong> Piped or modeled. Never fresh fruit.</span>
+        </a>
       </div>
     </section>
 
@@ -62,7 +102,6 @@
           <span id="step-size">2 Size</span>
           <span id="step-finish">3 Finish</span>
         </div>
-
         <div id="stage-order" class="stage">
           <div id="choices" class="choice-grid"></div>
           <div class="order-footer">
@@ -77,7 +116,6 @@
             </div>
           </div>
         </div>
-
         <form id="stage-date" class="stage" hidden>
           <label for="pickup-date">Collection day</label>
           <select id="pickup-date" required></select>
@@ -90,7 +128,6 @@
             </div>
           </div>
         </form>
-
         <form id="stage-account" class="stage" hidden>
           <p>A name and email so this preview remembers you on this phone.</p>
           <label for="cust-name">Name</label>
@@ -102,7 +139,6 @@
             <button class="btn" type="submit">Continue to pay</button>
           </div>
         </form>
-
         <form id="stage-pay" class="stage" hidden>
           <p>Hi <span id="hello-name">there</span>. Looks real. Nothing is charged.</p>
           <label for="card-number">Card number</label>
@@ -123,7 +159,6 @@
             <button class="btn" type="submit">Pay</button>
           </div>
         </form>
-
         <div id="stage-done" class="stage confirm" hidden>
           <h3>You’re on the bake list.</h3>
           <div id="conf-body"></div>
@@ -132,27 +167,18 @@
       </div>
     </section>
 
-
     <section class="section wrap" id="gallery">
       <p class="eyebrow">Style, not the menu</p>
       <h2>How a cake can look.</h2>
-      <p class="muted">Gallery only. The shop still sells three cakes: vanilla bean, dark chocolate, and lemon with raspberry jam.</p>
-      <div class="portfolio-grid style-grid">
-        <figure class="shot"><img data-b64="images/gallery-b64/040-cut.b64" alt="Layer cake with one slice cut"><figcaption>Inside</figcaption></figure>
+      <p class="muted">Imagine stills and past work. The shop still sells three cakes.</p>
+      <div class="mosaic">
+        <figure class="shot tall"><img data-b64="images/gallery-b64/040-cut.b64" alt="Layer cake with one slice cut"><figcaption>Inside</figcaption></figure>
         <figure class="shot"><img data-b64="images/gallery-b64/041-funfetti.b64" alt="Semi-naked funfetti cake"><figcaption>Sprinkle</figcaption></figure>
         <figure class="shot"><img data-b64="images/gallery-b64/069-drip.b64" alt="Tan cake with chocolate drip"><figcaption>Drip</figcaption></figure>
         <figure class="shot"><img data-b64="images/gallery-b64/091-yellow.b64" alt="Pale yellow vintage buttercream cake"><figcaption>Yellow</figcaption></figure>
-        <figure class="shot"><img data-b64="images/gallery-b64/095-floral.b64" alt="Lavender cake with piped flowers"><figcaption>Floral</figcaption></figure>
+        <figure class="shot wide"><img data-b64="images/gallery-b64/095-floral.b64" alt="Lavender cake with piped flowers"><figcaption>Floral</figcaption></figure>
         <figure class="shot"><img data-b64="images/gallery-b64/208-peach-roses.b64" alt="Cream cake with peach roses"><figcaption>Peach roses</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="section wrap" id="birthday-gallery">
-      <p class="eyebrow">Birthday</p>
-      <h2>A birthday finish on a real cake.</h2>
-      <p class="muted">Same three flavors. This is a chocolate cake in a birthday finish, not a fourth SKU.</p>
-      <div class="portfolio-grid">
-        <figure class="shot"><img data-b64="images/gallery-b64/058-chocolate-birthday.b64" alt="Chocolate birthday cake with gold Happy Birthday topper"><figcaption>Birthday chocolate</figcaption></figure>
+        <figure class="shot"><img data-b64="images/gallery-b64/058-chocolate-birthday.b64" alt="Chocolate birthday cake"><figcaption>Birthday finish</figcaption></figure>
       </div>
     </section>
 
@@ -160,27 +186,24 @@
       <p class="eyebrow">Custom writing</p>
       <h2>Piped words, not a menu item.</h2>
       <p class="muted">Not for order. A one-off. Not a product card.</p>
-      <div class="portfolio-grid">
-        <figure class="shot"><img data-b64="images/gallery-b64/130-teal-custom.b64" alt="Custom piped teal writing cake"><figcaption>Custom · not for sale</figcaption></figure>
-      </div>
+      <figure class="shot custom-shot">
+        <img data-b64="images/gallery-b64/130-teal-custom.b64" alt="Custom piped teal writing cake" />
+        <figcaption>Custom · not for sale</figcaption>
+      </figure>
     </section>
+
     <section class="section wrap" id="portfolio">
       <p class="eyebrow">Portfolio</p>
       <h2>Sculpted pieces, not the menu.</h2>
-      <p class="muted">Show work Francesca has already baked. These are not for the three-tap order.</p>
-      <div class="portfolio-grid">
-        <figure class="shot">
-          <img id="seal-photo" src="images/portfolio/seal-cake.jpg" alt="Sculpted cream harp-seal cake on wood, no people" />
-          <figcaption><span class="pill">Past work</span> Harp seal · sculpted, not a SKU</figcaption>
-        </figure>
-        <figure class="shot">
-          <img data-b64="images/portfolio-b64/grogu.b64" alt="Piped Grogu on a tall cream cake, Francesca’s original photo" />
-          <figcaption><span class="pill">Past work</span> Grogu · original photo, not a SKU</figcaption>
-        </figure>
-        <figure class="shot">
-          <img data-b64="images/portfolio-b64/mandalorian-helmet.b64" alt="Mandalorian helmet painted on a cream cake" />
-          <figcaption><span class="pill">Past work</span> Mandalorian helmet · not a SKU</figcaption>
-        </figure>
+      <p class="muted">Work Francesca has already baked. Not for the three-tap order.</p>
+      <div class="mosaic portfolio-mosaic">
+        <figure class="shot tall"><img data-b64="images/portfolio-b64/grogu.b64" alt="Piped Grogu on a cream cake, Francesca’s original photo"><figcaption><span class="pill">Original photo</span> Grogu</figcaption></figure>
+        <figure class="shot"><img data-b64="images/portfolio-b64/mandalorian-helmet.b64" alt="Mandalorian helmet painted on a cream cake"><figcaption><span class="pill">Past work</span> Helmet</figcaption></figure>
+        <figure class="shot"><img data-b64="images/portfolio-b64/seal-cake.b64" alt="Sculpted cream harp-seal cake"><figcaption><span class="pill">Past work</span> Harp seal</figcaption></figure>
+        <figure class="shot"><img data-b64="images/portfolio-b64/tangerine.b64" alt="Sculpted tangerine cake"><figcaption><span class="pill">Past work</span> Tangerine</figcaption></figure>
+        <figure class="shot"><img data-b64="images/portfolio-b64/skull.b64" alt="Sculpted skull cake"><figcaption><span class="pill">Past work</span> Skull</figcaption></figure>
+        <figure class="shot"><img data-b64="images/portfolio-b64/witch.b64" alt="Sculpted witch cake"><figcaption><span class="pill">Past work</span> Witch</figcaption></figure>
+        <figure class="shot wide"><img data-b64="images/portfolio-b64/christmas.b64" alt="Sculpted Christmas cake"><figcaption><span class="pill">Past work</span> Christmas</figcaption></figure>
       </div>
     </section>
 
@@ -198,7 +221,7 @@
     </section>
   </main>
 
-  <footer class="wrap">Francesca’s Cakes · London, Ontario · preview shop</footer>
+  <footer class="wrap">Francesca’s Cakes · London, Ontario · preview shop · Imagine stills until kitchen photos land</footer>
   <script src="gallery.js"></script>
   <script src="app.js"></script>
 </body>
