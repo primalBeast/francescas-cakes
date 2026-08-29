@@ -1,17 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cream" data-palette="cream-cocoa" data-corners="soft" data-type="serif" data-density="comfy" data-photos="airy" data-buttons="filled" data-logo="wordmark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Francesca’s Cakes · London, Ontario</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Figtree:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Fredoka:wght@400;500;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Newsreader:opsz,wght@6..72,300;6..72,500&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="theme-kit.css" />
 </head>
 <body>
+  <aside id="look-bar" role="region" aria-label="Look studio preview toolbar">
+    <div class="look-bar-inner">
+      <p class="look-bar-label">Look studio · pick a combination, then tell Cake Web to lock it</p>
+      <div class="look-controls">
+        <label class="look-field">
+          <span>Design</span>
+          <select id="look-design" aria-label="Design">
+            <option value="cream">cream — warm bakery</option>
+            <option value="cocoa">cocoa — dark atelier</option>
+            <option value="lemon">lemon — bright picnic</option>
+            <option value="editorial">editorial — magazine</option>
+            <option value="paris">paris — dusty rose</option>
+            <option value="brutal">brutal — sharp blocks</option>
+            <option value="cottage">cottage — vintage floral</option>
+            <option value="neon">neon — night shop</option>
+            <option value="wabi">wabi — quiet paper</option>
+            <option value="carnival">carnival — birthday</option>
+          </select>
+        </label>
+        <label class="look-field">
+          <span>Palette</span>
+          <select id="look-palette" aria-label="Palette">
+            <option value="cream-cocoa">cream-cocoa</option>
+            <option value="raspberry">raspberry</option>
+            <option value="midnight">midnight</option>
+            <option value="lemon-butter">lemon-butter</option>
+            <option value="sage">sage</option>
+            <option value="blush">blush</option>
+            <option value="ink">ink</option>
+            <option value="teal-ink">teal-ink</option>
+          </select>
+        </label>
+        <label class="look-field look-field-logo">
+          <span>Logo</span>
+          <span class="logo-select-row">
+            <img id="look-logo-preview" width="36" height="36" alt="" hidden />
+            <select id="look-logo" aria-label="Logo"></select>
+          </span>
+        </label>
+        <label class="look-field">
+          <span>Corners</span>
+          <select id="look-corners" aria-label="Corners">
+            <option value="soft">soft</option>
+            <option value="round">round</option>
+            <option value="sharp">sharp</option>
+          </select>
+        </label>
+        <label class="look-field">
+          <span>Type</span>
+          <select id="look-type" aria-label="Type">
+            <option value="serif">serif</option>
+            <option value="sans">sans</option>
+            <option value="display">display</option>
+          </select>
+        </label>
+        <label class="look-field">
+          <span>Density</span>
+          <select id="look-density" aria-label="Density">
+            <option value="comfy">comfy</option>
+            <option value="compact">compact</option>
+            <option value="lush">lush</option>
+          </select>
+        </label>
+        <label class="look-field">
+          <span>Photos</span>
+          <select id="look-photos" aria-label="Photos">
+            <option value="airy">airy</option>
+            <option value="tight">tight</option>
+            <option value="full-bleed">full-bleed</option>
+          </select>
+        </label>
+        <label class="look-field">
+          <span>Buttons</span>
+          <select id="look-buttons" aria-label="Buttons">
+            <option value="filled">filled</option>
+            <option value="icing">icing</option>
+            <option value="outline">outline</option>
+          </select>
+        </label>
+        <label class="look-field">
+          <span>&nbsp;</span>
+          <button type="button" id="copy-look">Copy look</button>
+        </label>
+      </div>
+    </div>
+  </aside>
   <header class="site-header wrap">
-    <a class="logo" href="#top">Francesca’s <span>Cakes</span></a>
+    <a class="logo" href="#top"><img id="brand-logo" alt="" hidden />Francesca’s <span>Cakes</span></a>
     <nav>
       <a href="#order">Order</a>
       <a href="#cakes">The three</a>
@@ -223,6 +310,7 @@
 
   <footer class="wrap">Francesca’s Cakes · London, Ontario · preview shop · Imagine stills until kitchen photos land</footer>
   <script src="gallery.js"></script>
+  <script src="theme-kit.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
