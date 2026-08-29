@@ -199,66 +199,280 @@ html[data-palette="cream-cocoa"] {
 }
 
 html[data-palette="raspberry"] {
-  --cream: #f7e6ea;
-  --paper: #fff5f7;
-  --chocolate: #4a1824;
-  --malt: #8a4452;
-  --raspberry: #c45362;
-  --lemon: #e8b4c0;
+  --cream: #f6cfd8;
+  --paper: #fff0f3;
+  --chocolate: #5a1022;
+  --malt: #a33d52;
+  --raspberry: #d12b4a;
+  --lemon: #f0a0b4;
 }
 
 html[data-palette="midnight"] {
-  --cream: #e6e4f0;
-  --paper: #f3f1fa;
-  --chocolate: #141225;
-  --malt: #5c5878;
-  --raspberry: #c47ba0;
-  --lemon: #e2c56a;
+  --cream: #1c1a2e;
+  --paper: #2a2740;
+  --chocolate: #f3f0ff;
+  --malt: #b8b3d4;
+  --raspberry: #e08bb8;
+  --lemon: #f0d078;
 }
 
 html[data-palette="lemon-butter"] {
-  --cream: #f6f0c4;
-  --paper: #fffbeb;
-  --chocolate: #3d3210;
-  --malt: #8a7430;
-  --raspberry: #d08a3a;
-  --lemon: #e2bc3d;
+  --cream: #f4e56a;
+  --paper: #fff8c8;
+  --chocolate: #3a2e08;
+  --malt: #8a6e12;
+  --raspberry: #d46a1c;
+  --lemon: #f0c400;
 }
 
 html[data-palette="sage"] {
-  --cream: #e6eee3;
-  --paper: #f3f7f0;
-  --chocolate: #243028;
-  --malt: #5d6f62;
-  --raspberry: #a86b6b;
-  --lemon: #c5c07a;
+  --cream: #cfe3c8;
+  --paper: #eef6ea;
+  --chocolate: #1c3224;
+  --malt: #4e7358;
+  --raspberry: #b45a5a;
+  --lemon: #c9c24a;
 }
 
 html[data-palette="blush"] {
-  --cream: #f6e6e4;
-  --paper: #fdf4f2;
-  --chocolate: #4a2c32;
-  --malt: #8b5e66;
-  --raspberry: #c47a88;
-  --lemon: #e8c4a8;
+  --cream: #f3cfc8;
+  --paper: #fdeeea;
+  --chocolate: #5a2430;
+  --malt: #a0606c;
+  --raspberry: #d46a7c;
+  --lemon: #f0c4a0;
 }
 
 html[data-palette="ink"] {
-  --cream: #f1f1ee;
-  --paper: #fafafa;
-  --chocolate: #111111;
-  --malt: #555555;
-  --raspberry: #2a2a2a;
-  --lemon: #c8c8c4;
+  --cream: #ecece8;
+  --paper: #ffffff;
+  --chocolate: #0a0a0a;
+  --malt: #444444;
+  --raspberry: #111111;
+  --lemon: #c8c8c0;
 }
 
 html[data-palette="teal-ink"] {
-  --cream: #e3eeec;
-  --paper: #f2f8f6;
-  --chocolate: #102422;
-  --malt: #3d5c58;
-  --raspberry: #2a7a72;
-  --lemon: #d4c07a;
+  --cream: #bfe4de;
+  --paper: #e8f7f4;
+  --chocolate: #062824;
+  --malt: #2f6a64;
+  --raspberry: #0e8a7c;
+  --lemon: #e0c45a;
 }
 
-@import url("theme-kit-designs.css");
+
+/* Tokens used by styles.css must follow the look kit, not the :root snapshot */
+html {
+  --serif: var(--font-serif);
+  --sans: var(--font-sans);
+  --icing: color-mix(in srgb, var(--paper) 82%, white);
+  --cocoa: color-mix(in srgb, var(--chocolate) 82%, black);
+  --lemon-soft: color-mix(in srgb, var(--lemon) 42%, var(--paper));
+  --butter: color-mix(in srgb, var(--lemon) 38%, var(--cream));
+  --line: color-mix(in srgb, var(--chocolate) 12%, transparent);
+  --shadow: 0 22px 50px color-mix(in srgb, var(--chocolate) 14%, transparent);
+}
+
+html body {
+  color: var(--chocolate);
+  background:
+    radial-gradient(1200px 500px at 10% -10%, color-mix(in srgb, var(--lemon) 42%, transparent), transparent 50%),
+    radial-gradient(900px 400px at 110% 8%, color-mix(in srgb, var(--raspberry) 14%, transparent), transparent 46%),
+    var(--cream);
+  font-family: var(--sans);
+}
+
+html .site-header {
+  background: color-mix(in srgb, var(--cream) 82%, var(--paper));
+  border-bottom: 1px solid var(--line);
+  color: var(--chocolate);
+}
+
+html .logo { font-family: var(--serif); color: var(--chocolate); }
+html .logo span { color: var(--raspberry); }
+html nav a { color: var(--malt); }
+html h1, html h2, html h3, html .price, html .choice b { font-family: var(--serif); color: var(--chocolate); }
+html h1 em { color: var(--raspberry); }
+html .lede, html .muted, html .eyebrow, html footer { color: var(--malt); }
+html .menu-card,
+html .order-panel,
+html .shot,
+html .note,
+html .choice,
+html .confirm {
+  background: var(--paper);
+  color: var(--chocolate);
+  border-color: var(--line);
+}
+html .btn {
+  background: var(--chocolate);
+  color: var(--paper);
+}
+html .btn.ghost {
+  background: transparent;
+  color: var(--chocolate);
+  border-color: var(--line);
+}
+
+html[data-type="serif"] {
+  --serif: var(--font-serif);
+  --sans: var(--font-sans);
+}
+
+#look-now {
+  margin: 0;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c5e4c0;
+  flex: 1 1 100%;
+}
+html[data-type="sans"] {
+  --serif: var(--font-sans);
+  --sans: var(--font-sans);
+}
+html[data-type="display"] {
+  --serif: var(--font-display);
+  --sans: var(--font-sans);
+}
+
+html[data-type="sans"] h1,
+html[data-type="sans"] h2,
+html[data-type="sans"] h3,
+html[data-type="sans"] .logo,
+html[data-type="sans"] .price,
+html[data-type="sans"] .choice b {
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------------ */
+/* Corners — soft keeps the design radius; round/sharp override it     */
+/* ------------------------------------------------------------------ */
+html[data-corners="round"] {
+  --radius: 2.5rem;
+  --radius-btn: 999px;
+  --radius-photo: 3rem;
+}
+html[data-corners="sharp"] {
+  --radius: 2px;
+  --radius-btn: 2px;
+  --radius-photo: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Density                                                             */
+/* ------------------------------------------------------------------ */
+html[data-density="compact"] .section { padding: 1.25rem 0 1.6rem; }
+html[data-density="compact"] .hero { padding: 1.15rem 0 1rem; gap: 1rem; }
+html[data-density="compact"] .menu-grid,
+html[data-density="compact"] .mosaic,
+html[data-density="compact"] .theme-grid,
+html[data-density="compact"] .choice-grid { gap: 0.45rem; margin-top: 0.7rem; }
+html[data-density="compact"] .order-panel { padding: 0.85rem; }
+html[data-density="compact"] .menu-card img { height: 13rem; }
+html[data-density="compact"] .hero-photo img { height: 20rem; }
+html[data-density="compact"] h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+
+html[data-density="lush"] .section { padding: 3.8rem 0 4.4rem; }
+html[data-density="lush"] .hero { padding: 4.2rem 0 3.2rem; gap: 3rem; }
+html[data-density="lush"] .menu-grid,
+html[data-density="lush"] .mosaic,
+html[data-density="lush"] .theme-grid { gap: 1.55rem; margin-top: 1.8rem; }
+html[data-density="lush"] .wrap { width: min(1180px, calc(100% - 3.4rem)); }
+html[data-density="lush"] .lede { font-size: 1.22rem; }
+
+/* ------------------------------------------------------------------ */
+/* Photos                                                              */
+/* ------------------------------------------------------------------ */
+html[data-photos="airy"] .hero-photo img,
+html[data-photos="airy"] .menu-card img,
+html[data-photos="airy"] .shot img,
+html[data-photos="airy"] .theme-shot img {
+  object-fit: cover;
+}
+
+html[data-photos="tight"] .hero-photo,
+html[data-photos="tight"] .menu-card,
+html[data-photos="tight"] .shot,
+html[data-photos="tight"] .theme-shot {
+  border-radius: calc(var(--radius) * 0.4);
+}
+html[data-photos="tight"] .hero-photo img { height: 22rem; object-fit: cover; object-position: center 40%; }
+html[data-photos="tight"] .menu-card img { height: 13.5rem; object-fit: cover; }
+html[data-photos="tight"] .shot img { height: 14.5rem; }
+html[data-photos="tight"] .shot.tall img { height: 20rem; }
+html[data-photos="tight"] .shot.wide img { height: 16rem; }
+html[data-photos="tight"] .theme-shot,
+html[data-photos="tight"] .theme-shot img { min-height: 12.5rem; height: 12.5rem; }
+
+html[data-photos="full-bleed"] .hero-photo,
+html[data-photos="full-bleed"] .menu-card,
+html[data-photos="full-bleed"] .shot,
+html[data-photos="full-bleed"] .theme-shot,
+html[data-photos="full-bleed"] .choice {
+  border-radius: 0;
+}
+html[data-photos="full-bleed"] .hero {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+html[data-photos="full-bleed"] .hero.wrap {
+  width: 100%;
+}
+html[data-photos="full-bleed"] .hero-photo img { height: 34rem; object-fit: cover; }
+html[data-photos="full-bleed"] .menu-card img { height: 20rem; }
+html[data-photos="full-bleed"] .shot img { height: 22rem; }
+html[data-photos="full-bleed"] .shot.tall img { height: 30rem; }
+html[data-photos="full-bleed"] .mosaic { gap: 0.35rem; }
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+html[data-buttons="icing"] .btn:not(.ghost) {
+  background: var(--paper);
+  color: var(--chocolate);
+  border: 2px solid var(--chocolate);
+  box-shadow:
+    0 0 0 4px var(--paper),
+    0 0 0 6px color-mix(in srgb, var(--raspberry) 40%, var(--chocolate));
+}
+html[data-buttons="icing"] .btn.ghost {
+  background: var(--icing);
+  border-style: dashed;
+}
+
+html[data-buttons="outline"] .btn:not(.ghost) {
+  background: transparent;
+  color: var(--chocolate);
+  border: 2px solid var(--chocolate);
+  box-shadow: none;
+}
+
+/* Dark-theme button contrast when outline/icing would vanish */
+html[data-theme="cocoa"][data-buttons="outline"] .btn:not(.ghost),
+html[data-theme="neon"][data-buttons="outline"] .btn:not(.ghost),
+html[data-theme="brutal"][data-buttons="outline"] .btn:not(.ghost) {
+  color: var(--cream);
+  border-color: var(--cream);
+}
+html[data-theme="cocoa"][data-buttons="icing"] .btn:not(.ghost),
+html[data-theme="neon"][data-buttons="icing"] .btn:not(.ghost) {
+  background: var(--cream);
+  color: var(--chocolate);
+}
+
+@media (max-width: 840px) {
+  html[data-theme="cream"] .hero,
+  html[data-theme="cocoa"] .hero,
+  html[data-theme="paris"] .hero,
+  html[data-theme="cottage"] .hero,
+  html[data-theme="neon"] .hero,
+  html[data-theme="carnival"] .hero {
+    grid-template-columns: 1fr;
+  }
+  html[data-theme="cocoa"] .hero-photo { order: 0; }
+  html[data-photos="full-bleed"] .hero-photo img { height: 22rem; }
+  html[data-theme="editorial"] h1 { font-size: clamp(2.6rem, 14vw, 4.4rem); }
+}
