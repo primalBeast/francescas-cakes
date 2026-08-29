@@ -1,0 +1,155 @@
+/* ------------------------------------------------------------------ */
+/* Type — swap --serif / --sans after designs set font stacks          */
+/* ------------------------------------------------------------------ */
+html[data-type="serif"] {
+  --serif: var(--font-serif);
+  --sans: var(--font-sans);
+}
+html[data-type="sans"] {
+  --serif: var(--font-sans);
+  --sans: var(--font-sans);
+}
+html[data-type="display"] {
+  --serif: var(--font-display);
+  --sans: var(--font-sans);
+}
+
+html[data-type="sans"] h1,
+html[data-type="sans"] h2,
+html[data-type="sans"] h3,
+html[data-type="sans"] .logo,
+html[data-type="sans"] .price,
+html[data-type="sans"] .choice b {
+  font-style: normal;
+}
+
+/* ------------------------------------------------------------------ */
+/* Corners — soft keeps the design radius; round/sharp override it     */
+/* ------------------------------------------------------------------ */
+html[data-corners="round"] {
+  --radius: 2.5rem;
+  --radius-btn: 999px;
+  --radius-photo: 3rem;
+}
+html[data-corners="sharp"] {
+  --radius: 2px;
+  --radius-btn: 2px;
+  --radius-photo: 2px;
+}
+
+/* ------------------------------------------------------------------ */
+/* Density                                                             */
+/* ------------------------------------------------------------------ */
+html[data-density="compact"] .section { padding: 1.25rem 0 1.6rem; }
+html[data-density="compact"] .hero { padding: 1.15rem 0 1rem; gap: 1rem; }
+html[data-density="compact"] .menu-grid,
+html[data-density="compact"] .mosaic,
+html[data-density="compact"] .theme-grid,
+html[data-density="compact"] .choice-grid { gap: 0.45rem; margin-top: 0.7rem; }
+html[data-density="compact"] .order-panel { padding: 0.85rem; }
+html[data-density="compact"] .menu-card img { height: 13rem; }
+html[data-density="compact"] .hero-photo img { height: 20rem; }
+html[data-density="compact"] h1 { font-size: clamp(2rem, 5vw, 3.4rem); }
+
+html[data-density="lush"] .section { padding: 3.8rem 0 4.4rem; }
+html[data-density="lush"] .hero { padding: 4.2rem 0 3.2rem; gap: 3rem; }
+html[data-density="lush"] .menu-grid,
+html[data-density="lush"] .mosaic,
+html[data-density="lush"] .theme-grid { gap: 1.55rem; margin-top: 1.8rem; }
+html[data-density="lush"] .wrap { width: min(1180px, calc(100% - 3.4rem)); }
+html[data-density="lush"] .lede { font-size: 1.22rem; }
+
+/* ------------------------------------------------------------------ */
+/* Photos                                                              */
+/* ------------------------------------------------------------------ */
+html[data-photos="airy"] .hero-photo img,
+html[data-photos="airy"] .menu-card img,
+html[data-photos="airy"] .shot img,
+html[data-photos="airy"] .theme-shot img {
+  object-fit: cover;
+}
+
+html[data-photos="tight"] .hero-photo,
+html[data-photos="tight"] .menu-card,
+html[data-photos="tight"] .shot,
+html[data-photos="tight"] .theme-shot {
+  border-radius: calc(var(--radius) * 0.4);
+}
+html[data-photos="tight"] .hero-photo img { height: 22rem; object-fit: cover; object-position: center 40%; }
+html[data-photos="tight"] .menu-card img { height: 13.5rem; object-fit: cover; }
+html[data-photos="tight"] .shot img { height: 14.5rem; }
+html[data-photos="tight"] .shot.tall img { height: 20rem; }
+html[data-photos="tight"] .shot.wide img { height: 16rem; }
+html[data-photos="tight"] .theme-shot,
+html[data-photos="tight"] .theme-shot img { min-height: 12.5rem; height: 12.5rem; }
+
+html[data-photos="full-bleed"] .hero-photo,
+html[data-photos="full-bleed"] .menu-card,
+html[data-photos="full-bleed"] .shot,
+html[data-photos="full-bleed"] .theme-shot,
+html[data-photos="full-bleed"] .choice {
+  border-radius: 0;
+}
+html[data-photos="full-bleed"] .hero {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+html[data-photos="full-bleed"] .hero.wrap {
+  width: 100%;
+}
+html[data-photos="full-bleed"] .hero-photo img { height: 34rem; object-fit: cover; }
+html[data-photos="full-bleed"] .menu-card img { height: 20rem; }
+html[data-photos="full-bleed"] .shot img { height: 22rem; }
+html[data-photos="full-bleed"] .shot.tall img { height: 30rem; }
+html[data-photos="full-bleed"] .mosaic { gap: 0.35rem; }
+
+/* ------------------------------------------------------------------ */
+/* Buttons                                                             */
+/* ------------------------------------------------------------------ */
+html[data-buttons="icing"] .btn:not(.ghost) {
+  background: var(--paper);
+  color: var(--chocolate);
+  border: 2px solid var(--chocolate);
+  box-shadow:
+    0 0 0 4px var(--paper),
+    0 0 0 6px color-mix(in srgb, var(--raspberry) 40%, var(--chocolate));
+}
+html[data-buttons="icing"] .btn.ghost {
+  background: var(--icing);
+  border-style: dashed;
+}
+
+html[data-buttons="outline"] .btn:not(.ghost) {
+  background: transparent;
+  color: var(--chocolate);
+  border: 2px solid var(--chocolate);
+  box-shadow: none;
+}
+
+/* Dark-theme button contrast when outline/icing would vanish */
+html[data-theme="cocoa"][data-buttons="outline"] .btn:not(.ghost),
+html[data-theme="neon"][data-buttons="outline"] .btn:not(.ghost),
+html[data-theme="brutal"][data-buttons="outline"] .btn:not(.ghost) {
+  color: var(--cream);
+  border-color: var(--cream);
+}
+html[data-theme="cocoa"][data-buttons="icing"] .btn:not(.ghost),
+html[data-theme="neon"][data-buttons="icing"] .btn:not(.ghost) {
+  background: var(--cream);
+  color: var(--chocolate);
+}
+
+@media (max-width: 840px) {
+  html[data-theme="cream"] .hero,
+  html[data-theme="cocoa"] .hero,
+  html[data-theme="paris"] .hero,
+  html[data-theme="cottage"] .hero,
+  html[data-theme="neon"] .hero,
+  html[data-theme="carnival"] .hero {
+    grid-template-columns: 1fr;
+  }
+  html[data-theme="cocoa"] .hero-photo { order: 0; }
+  html[data-photos="full-bleed"] .hero-photo img { height: 22rem; }
+  html[data-theme="editorial"] h1 { font-size: clamp(2.6rem, 14vw, 4.4rem); }
+}
