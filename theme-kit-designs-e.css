@@ -1,0 +1,199 @@
+/* Look studio designs E: atelier party letterpress fridge counter */
+
+/* atelier — studio, left sticky rail, no top banner */
+html[data-theme='atelier']{
+  --font-serif:'Syne',sans-serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Syne',sans-serif;
+  --radius:.25rem;--radius-btn:.25rem;--radius-photo:.25rem;--shadow:none;
+}
+html[data-theme='atelier'] body{
+  display:grid;grid-template-columns:15.2rem 1fr;background:var(--paper);
+}
+html[data-theme='atelier'] #look-bar{grid-column:1/-1}
+html[data-theme='atelier'] .site-header{
+  grid-column:1;grid-row:2/span 12;position:sticky;top:var(--look-bar-h);align-self:start;
+  height:calc(100vh - var(--look-bar-h));width:auto;max-width:none;
+  flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:1.8rem;
+  padding:1.6rem 1.15rem;border-bottom:0;border-right:1px solid var(--line);background:var(--cream);
+}
+html[data-theme='atelier'] .site-header nav{flex-direction:column;gap:.75rem;display:flex}
+html[data-theme='atelier'] .logo{font-size:1.05rem;letter-spacing:-.04em;writing-mode:horizontal-tb}
+html[data-theme='atelier'] main,html[data-theme='atelier'] footer{grid-column:2}
+html[data-theme='atelier'] .hero{grid-template-columns:1fr;padding:2.4rem 1.4rem 1.2rem;gap:1.4rem}
+html[data-theme='atelier'] .hero-photo img{height:22rem}
+html[data-theme='atelier'] .menu-grid{grid-template-columns:1fr 1fr}
+html[data-theme='atelier'] .menu-grid .menu-card:last-child{grid-column:1/-1}
+html[data-theme='atelier'] .wrap{width:min(980px,calc(100% - 2.2rem))}
+html[data-theme='atelier'] .menu-card,.shot,.order-panel,.note{box-shadow:none;border:1px solid var(--line)}
+html[data-theme='atelier'] footer{border-top:1px solid var(--line);padding:1.4rem}
+html[data-theme='atelier'] h1{font-weight:800;letter-spacing:-.05em}
+
+/* party — birthday pennants, confetti, cake-first centered */
+html[data-theme='party']{
+  --font-serif:'Fredoka',sans-serif;
+  --font-sans:'Fredoka',sans-serif;
+  --font-display:'Fredoka',sans-serif;
+  --radius:1.6rem;--radius-btn:999px;--radius-photo:50%;
+  --shadow:0 8px 0 var(--raspberry);
+}
+html[data-theme='party'] body{
+  background-color:var(--cream);
+  background-image:
+    radial-gradient(circle at 8px 10px,var(--raspberry) 2px,transparent 2.3px),
+    radial-gradient(circle at 28px 24px,var(--lemon) 2.2px,transparent 2.5px),
+    radial-gradient(circle at 48px 8px,var(--chocolate) 1.5px,transparent 1.7px),
+    radial-gradient(circle at 64px 30px,var(--malt) 1.8px,transparent 2px);
+  background-size:72px 44px;
+}
+html[data-theme='party'] .shop-banner{
+  display:flex;justify-content:center;align-items:flex-end;gap:3px;flex-wrap:wrap;
+  background:transparent;padding:.35rem .4rem 0;min-height:3.4rem;
+}
+html[data-theme='party'] .shop-banner i{
+  display:block;width:2.15rem;height:2.7rem;clip-path:polygon(0 0,100% 0,50% 100%);
+}
+html[data-theme='party'] .shop-banner i:nth-child(odd){background:var(--raspberry)}
+html[data-theme='party'] .shop-banner i:nth-child(even){background:var(--lemon)}
+html[data-theme='party'] .shop-banner i:nth-child(3n){background:var(--chocolate)}
+html[data-theme='party'] .shop-banner-label{
+  display:block;flex:1 1 100%;text-align:center;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;font-size:.78rem;color:var(--chocolate);padding:.2rem 0 .15rem;
+}
+html[data-theme='party'] .shop-banner-label::before{content:'HAPPY BIRTHDAY'}
+html[data-theme='party'] .site-header{
+  flex-direction:column;align-items:center;background:transparent;border:0;padding:.6rem 0;
+}
+html[data-theme='party'] .hero{grid-template-columns:1fr;text-align:center;gap:1.1rem}
+html[data-theme='party'] .hero-photo{order:-1;max-width:18rem;margin-inline:auto;border-radius:50%;border:8px solid var(--paper)}
+html[data-theme='party'] .hero-photo img{height:18rem;border-radius:50%}
+html[data-theme='party'] .hero-photo figcaption{display:none}
+html[data-theme='party'] .lede,.hero-actions{margin-inline:auto;justify-content:center}
+html[data-theme='party'] .menu-grid{grid-template-columns:1fr;max-width:22rem;margin-inline:auto}
+html[data-theme='party'] .menu-card{align-items:center;text-align:center;border:3px solid var(--chocolate)}
+html[data-theme='party'] .menu-card img{height:12rem;object-fit:cover}
+html[data-theme='party'] .btn{border:3px solid var(--chocolate)}
+html[data-theme='party'] footer{text-align:center;border:0;background:var(--raspberry);color:var(--paper)}
+
+/* letterpress — invitation, ornamental rules, photo below, no banner */
+html[data-theme='letterpress']{
+  --font-serif:'Cinzel',serif;
+  --font-sans:'Spectral',serif;
+  --font-display:'Great Vibes',cursive;
+  --radius:0;--radius-btn:0;--radius-photo:0;--shadow:none;
+}
+html[data-theme='letterpress'] body{background:var(--paper)}
+html[data-theme='letterpress'] .wrap{width:min(640px,calc(100% - 2.8rem))}
+html[data-theme='letterpress'] .site-header{
+  flex-direction:column;align-items:center;background:transparent;border:0;padding:2.2rem 0 1rem;gap:.55rem;
+}
+html[data-theme='letterpress'] .logo{
+  font-family:var(--font-display);font-size:2.4rem;font-weight:400;letter-spacing:.02em;
+  border-top:2px solid var(--chocolate);border-bottom:2px solid var(--chocolate);padding:.35rem 1.2rem;
+}
+html[data-theme='letterpress'] .logo span{color:inherit}
+html[data-theme='letterpress'] nav{gap:1.2rem;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+html[data-theme='letterpress'] .hero{
+  grid-template-columns:1fr;text-align:center;max-width:36rem;margin-inline:auto;padding:1.4rem 0 2rem;
+}
+html[data-theme='letterpress'] h1{
+  font-family:var(--font-display);font-size:clamp(2.8rem,8vw,4.6rem);font-weight:400;letter-spacing:0;line-height:1.05;
+}
+html[data-theme='letterpress'] h1 em{font-style:normal;color:var(--raspberry)}
+html[data-theme='letterpress'] .hero-photo{order:5;max-width:20rem;margin:1.6rem auto 0;border:8px solid var(--paper);outline:1px solid var(--chocolate)}
+html[data-theme='letterpress'] .hero-actions{justify-content:center}
+html[data-theme='letterpress'] .lede{margin-inline:auto}
+html[data-theme='letterpress'] .section h2{text-align:center;font-size:1.15rem;letter-spacing:.22em;text-transform:uppercase;font-weight:500}
+html[data-theme='letterpress'] .menu-grid{grid-template-columns:1fr;gap:0}
+html[data-theme='letterpress'] .menu-card{
+  background:transparent;box-shadow:none;border:0;border-top:1px solid var(--chocolate);flex-direction:row;align-items:center;
+}
+html[data-theme='letterpress'] .menu-card img{width:5.5rem;height:5.5rem;flex:0 0 5.5rem;filter:grayscale(.35)}
+html[data-theme='letterpress'] .menu-card:hover{transform:none}
+html[data-theme='letterpress'] .btn{letter-spacing:.18em;text-transform:uppercase;font-size:.68rem;box-shadow:none}
+html[data-theme='letterpress'] footer{
+  text-align:center;border:0;border-top:2px solid var(--chocolate);letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;
+}
+html[data-theme='letterpress'] .mosaic{grid-template-columns:1fr 1fr}
+html[data-theme='letterpress'] .shot{border:1px solid var(--chocolate);box-shadow:none}
+
+/* fridge — polaroid wall as hero, washi banner, copy after photos */
+html[data-theme='fridge']{
+  --font-serif:'Figtree',sans-serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Permanent Marker',cursive;
+  --radius:.2rem;--radius-btn:.3rem;--radius-photo:.15rem;
+}
+html[data-theme='fridge'] body{background:color-mix(in srgb,var(--malt) 22%,var(--paper))}
+html[data-theme='fridge'] main{display:flex;flex-direction:column}
+html[data-theme='fridge'] #gallery{order:-3}
+html[data-theme='fridge'] .hero{order:-2}
+html[data-theme='fridge'] #cakes{order:-1}
+html[data-theme='fridge'] .shop-banner{
+  display:block;height:1.35rem;
+  background:repeating-linear-gradient(90deg,color-mix(in srgb,var(--lemon) 80%,var(--paper)) 0 18px,color-mix(in srgb,var(--raspberry) 45%,var(--paper)) 18px 36px,var(--paper) 36px 42px);
+  transform:rotate(-1.4deg);margin:.3rem 2vw 0;
+}
+html[data-theme='fridge'] .site-header{background:transparent;border:0;padding:.5rem 0}
+html[data-theme='fridge'] .hero{grid-template-columns:1fr;text-align:center;padding:1rem 0 1.6rem}
+html[data-theme='fridge'] .hero-photo{display:none}
+html[data-theme='fridge'] .lede,.hero-actions{margin-inline:auto;justify-content:center}
+html[data-theme='fridge'] #gallery .mosaic{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;padding:1.2rem .4rem 1.6rem;
+  background:linear-gradient(180deg,color-mix(in srgb,var(--malt) 12%,var(--paper)),var(--paper));
+}
+html[data-theme='fridge'] #gallery .shot,html[data-theme='fridge'] .menu-card,html[data-theme='fridge'] .theme-shot{
+  width:11.2rem;flex:0 0 11.2rem;background:var(--paper);border:.55rem solid var(--paper);
+  box-shadow:2px 5px 12px color-mix(in srgb,var(--chocolate) 22%,transparent);
+}
+html[data-theme='fridge'] #gallery .shot.wide,html[data-theme='fridge'] #gallery .shot.tall{grid-column:auto;width:13rem;flex-basis:13rem}
+html[data-theme='fridge'] #gallery .shot img{height:11rem}
+html[data-theme='fridge'] #gallery .shot:nth-child(odd){transform:rotate(-2.6deg)}
+html[data-theme='fridge'] #gallery .shot:nth-child(even){transform:rotate(2.1deg)}
+html[data-theme='fridge'] .menu-grid{display:flex;flex-wrap:wrap;justify-content:center}
+html[data-theme='fridge'] footer{text-align:center;border:0;background:var(--chocolate);color:var(--paper)}
+
+/* counter — order panel first, ticket header bar */
+html[data-theme='counter']{
+  --font-serif:'IBM Plex Mono',monospace;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Bebas Neue',sans-serif;
+  --radius:.3rem;--radius-btn:.2rem;--radius-photo:.2rem;
+}
+html[data-theme='counter'] body{background:color-mix(in srgb,var(--cream) 70%,var(--malt))}
+html[data-theme='counter'] main{display:flex;flex-direction:column}
+html[data-theme='counter'] #order{order:-4}
+html[data-theme='counter'] .hero{order:-3}
+html[data-theme='counter'] #cakes{order:-2}
+html[data-theme='counter'] .shop-banner{
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--chocolate);color:var(--paper);padding:.4rem 1rem;height:auto;
+  font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;
+}
+html[data-theme='counter'] .shop-banner-label{display:block;color:var(--paper)}
+html[data-theme='counter'] .shop-banner-label::before{content:'TICKET  ·  FRI / SAT / SUN'}
+html[data-theme='counter'] .site-header{
+  background:var(--paper);border-bottom:3px solid var(--chocolate);padding:.55rem 0;
+}
+html[data-theme='counter'] .logo{font-family:var(--font-display);letter-spacing:.12em;text-transform:uppercase}
+html[data-theme='counter'] .hero{grid-template-columns:1fr 1fr;padding:1rem 0;gap:1rem}
+html[data-theme='counter'] .hero-photo img{height:16rem}
+html[data-theme='counter'] #order{background:var(--paper);padding-top:1.2rem;border-bottom:8px solid var(--chocolate)}
+html[data-theme='counter'] .order-panel{border:2px solid var(--chocolate);box-shadow:none;border-radius:0}
+html[data-theme='counter'] .menu-grid{display:flex;overflow-x:auto;gap:.6rem}
+html[data-theme='counter'] .menu-card{flex:0 0 15rem;flex-direction:row;align-items:center;border:1px solid var(--chocolate)}
+html[data-theme='counter'] .menu-card img{width:5rem;height:5rem;flex:0 0 5rem}
+html[data-theme='counter'] footer{
+  background:var(--chocolate);color:var(--paper);border:0;font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.08em;
+}
+html[data-theme='counter'] h1{font-family:var(--font-display);text-transform:uppercase;letter-spacing:.04em}
+
+@media (max-width:840px){
+  html[data-theme='atelier'] body{display:block}
+  html[data-theme='atelier'] .site-header{
+    position:sticky;height:auto;flex-direction:row;width:100%;border-right:0;border-bottom:1px solid var(--line);
+  }
+  html[data-theme='atelier'] .site-header nav{flex-direction:row;display:flex;flex-wrap:wrap}
+  html[data-theme='party'] .hero,html[data-theme='letterpress'] .hero,html[data-theme='counter'] .hero,html[data-theme='fridge'] .hero{grid-template-columns:1fr}
+  html[data-theme='letterpress'] .menu-card{flex-direction:column;align-items:flex-start}
+}
