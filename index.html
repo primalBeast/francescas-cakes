@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Francesca’s Cakes · London, Ontario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="logo" href="#top">Francesca’s <span>Cakes</span></a>
+    <nav>
+      <a href="#order">Order</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero wrap">
+      <div>
+        <p class="eyebrow">London, Ontario · baker-led</p>
+        <h1>Little cakes,<br>made <em>on purpose</em>.</h1>
+        <p class="lede">Three cakes. Two sizes. A finish if you want a birthday, Halloween, or pretend fruit. Smooth American buttercream, no fondant on the order menu.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#order" data-start>Order a cake</a>
+          <a class="btn ghost" href="#portfolio">See sculpted work</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Starter cakes">
+        <p class="eyebrow">The three</p>
+        <div class="cake-stack">
+          <div class="cake-mini"><span class="swatch vanilla"></span><div><strong>Vanilla bean</strong><small>6″ $75 · 8″ $115</small></div></div>
+          <div class="cake-mini"><span class="swatch chocolate"></span><div><strong>Dark chocolate</strong><small>6″ $75 · 8″ $115</small></div></div>
+          <div class="cake-mini"><span class="swatch lemon"></span><div><strong>Lemon · raspberry jam</strong><small>6″ $75 · 8″ $115</small></div></div>
+        </div>
+      </aside>
+    </section>
+    <section class="section wrap" id="themes">
+      <p class="eyebrow">Finishes, not extra flavors</p>
+      <h2>Pick a mood. Same cake.</h2>
+      <div class="themes">
+        <a class="theme-card plain" href="#order" data-start="plain"><strong>Plain</strong><p>Smooth round. The everyday cake.</p></a>
+        <a class="theme-card birthday" href="#order" data-start="birthday"><strong>Birthday</strong><p>Same vanilla, chocolate, or lemon. Festive icing.</p></a>
+        <a class="theme-card halloween" href="#order" data-start="halloween"><strong>Halloween</strong><p>Themed icing on a 6″ or 8″. Not a new SKU.</p></a>
+        <a class="theme-card fruit" href="#order" data-start="fruit"><strong>Pretend Fruit</strong><p>Piped or modeled. Never fresh fruit.</p></a>
+      </div>
+    </section>
+    <section class="section wrap" id="order">
+      <p class="eyebrow">Three taps</p>
+      <h2>Flavor, size, finish.</h2>
+      <p class="muted">Whole ticket, no tax line. Collection after a bake day — pick a Friday, Saturday, or Sunday at least 48 hours out.</p>
+      <div class="order-panel">
+        <div class="steps" aria-hidden="true">
+          <span id="step-flavor" class="on">1 Flavor</span>
+          <span id="step-size">2 Size</span>
+          <span id="step-finish">3 Finish</span>
+        </div>
+        <div id="stage-order" class="stage">
+          <div id="choices" class="choice-grid"></div>
+          <div class="order-footer">
+            <div>
+              <div class="price" id="price">$0</div>
+              <div class="muted" id="summary-line">Pick a flavor to start.</div>
+              <div class="muted" id="allergen-line">Every cake: egg, milk, wheat.</div>
+            </div>
+            <div>
+              <button class="btn ghost" id="back-btn" type="button">Back</button>
+              <button class="btn" id="continue-btn" type="button" disabled>Continue</button>
+            </div>
+          </div>
+        </div>
+        <form id="stage-date" class="stage" hidden>
+          <label for="pickup-date">Collection day</label>
+          <select id="pickup-date" required></select>
+          <p class="muted">Cakes stay at the shop until you collect. Pickup address comes with a real order.</p>
+          <div class="order-footer">
+            <span></span>
+            <div>
+              <button class="btn ghost" type="button" onclick="document.getElementById('back-btn').click()">Back</button>
+              <button class="btn" type="submit">Save my cake</button>
+            </div>
+          </div>
+        </form>
+        <form id="stage-account" class="stage" hidden>
+          <p>A name and email so this preview remembers you on this phone.</p>
+          <label for="cust-name">Name</label>
+          <input id="cust-name" name="name" autocomplete="name" required />
+          <label for="cust-email">Email</label>
+          <input id="cust-email" name="email" type="email" autocomplete="email" required />
+          <div class="order-footer">
+            <span></span>
+            <button class="btn" type="submit">Continue to pay</button>
+          </div>
+        </form>
+        <form id="stage-pay" class="stage" hidden>
+          <p>Hi <span id="hello-name">there</span>. Looks real. Nothing is charged.</p>
+          <label for="card-number">Card number</label>
+          <input id="card-number" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" required />
+          <div class="form-row">
+            <div>
+              <label for="card-exp">Expiry</label>
+              <input id="card-exp" placeholder="MM/YY" autocomplete="cc-exp" required />
+            </div>
+            <div>
+              <label for="card-cvc">CVC</label>
+              <input id="card-cvc" inputmode="numeric" autocomplete="cc-csc" required />
+            </div>
+          </div>
+          <p class="muted" id="pay-error" hidden></p>
+          <div class="order-footer">
+            <span></span>
+            <button class="btn" type="submit">Pay</button>
+          </div>
+        </form>
+        <div id="stage-done" class="stage confirm" hidden>
+          <h3>You’re on the bake list.</h3>
+          <div id="conf-body"></div>
+          <p><button class="btn" type="button" id="new-order">Order another</button></p>
+        </div>
+      </div>
+    </section>
+    <section class="section wrap" id="portfolio">
+      <p class="eyebrow">Portfolio</p>
+      <h2>Sculpted pieces, not the menu.</h2>
+      <p class="muted">Show work Francesca has already baked. These are not for the three-tap order.</p>
+      <div class="portfolio-grid">
+        <figure class="shot">
+          <img id="seal-photo" src="images/portfolio/seal-cake.jpg" alt="Sculpted cream harp-seal cake on wood, no people" />
+          <figcaption><span class="pill">Past work</span> Harp seal · sculpted, not a SKU</figcaption>
+        </figure>
+        <div class="empty-shot"><span>More stills landing soon</span></div>
+        <div class="empty-shot"><span>Fondant stays here, not on the order grid</span></div>
+      </div>
+    </section>
+    <section class="section wrap about" id="about">
+      <div>
+        <p class="eyebrow">The baker</p>
+        <h2>Francesca bakes. London eats.</h2>
+        <p>Francesca Arthur is the owner-baker. A small online shop, three cakes, pickup after a bake day. No cupcakes at launch, no cream-cheese or fresh-cream fillings on this menu.</p>
+      </div>
+      <aside class="note">
+        <p class="eyebrow">On the ticket</p>
+        <p><strong>$75</strong> for 6″ · <strong>$115</strong> for 8″. That’s the whole price.</p>
+        <p class="muted">Allergens on every cake: egg, milk, wheat. Chocolate may also include soy.</p>
+      </aside>
+    </section>
+  </main>
+  <footer class="wrap">Francesca’s Cakes · London, Ontario · preview shop</footer>
+  <script src="seal-photo.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
