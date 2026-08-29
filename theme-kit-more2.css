@@ -1,0 +1,143 @@
+/* brutal — huge sharp type, cream blocks on cocoa, no cute */
+html[data-theme="brutal"] {
+  --font-serif: "Archivo Black", "Impact", sans-serif;
+  --font-sans: "Figtree", "Arial", sans-serif;
+  --font-display: "Archivo Black", sans-serif;
+  --radius: 0;
+  --radius-btn: 0;
+  --radius-photo: 0;
+  --shadow: 8px 8px 0 var(--chocolate);
+}
+html[data-theme="brutal"] body {
+  background: var(--chocolate);
+  color: var(--cream);
+}
+html[data-theme="brutal"] .site-header {
+  background: var(--chocolate);
+  border-bottom: 4px solid var(--cream);
+}
+html[data-theme="brutal"] .logo {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-size: 1.15rem;
+}
+html[data-theme="brutal"] .logo span { color: var(--lemon); }
+html[data-theme="brutal"] nav a { color: var(--cream); }
+html[data-theme="brutal"] .hero {
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  padding-top: 2rem;
+}
+html[data-theme="brutal"] h1 {
+  font-size: clamp(3.1rem, 10vw, 6.8rem);
+  line-height: 0.82;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+  max-width: 12ch;
+}
+html[data-theme="brutal"] h1 em {
+  font-style: normal;
+  color: var(--lemon);
+}
+html[data-theme="brutal"] h2 {
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 0.9;
+  color: var(--cream);
+}
+html[data-theme="brutal"] .lede,
+html[data-theme="brutal"] .muted,
+html[data-theme="brutal"] .eyebrow,
+html[data-theme="brutal"] footer {
+  color: color-mix(in srgb, var(--cream) 75%, var(--malt));
+}
+html[data-theme="brutal"] .menu-card,
+html[data-theme="brutal"] .order-panel,
+html[data-theme="brutal"] .shot,
+html[data-theme="brutal"] .note,
+html[data-theme="brutal"] .choice,
+html[data-theme="brutal"] .confirm {
+  background: var(--cream);
+  color: var(--chocolate);
+  border: 3px solid var(--chocolate);
+  box-shadow: 8px 8px 0 var(--lemon);
+}
+html[data-theme="brutal"] .menu-card p,
+html[data-theme="brutal"] .shot figcaption,
+html[data-theme="brutal"] .hero-photo figcaption {
+  color: var(--chocolate);
+  background: var(--cream);
+}
+html[data-theme="brutal"] .hero-photo {
+  border: 3px solid var(--cream);
+  box-shadow: 10px 10px 0 var(--lemon);
+}
+html[data-theme="brutal"] .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 4px 4px 0 var(--lemon);
+  background: var(--cream);
+  color: var(--chocolate);
+}
+html[data-theme="brutal"] .btn.ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 3px solid var(--cream);
+  box-shadow: none;
+}
+html[data-theme="brutal"] input,
+html[data-theme="brutal"] select {
+  border: 3px solid var(--chocolate);
+  background: var(--cream);
+  color: var(--chocolate);
+}
+
+/* cottage — vintage floral, ruffles, serif, lace borders */
+html[data-theme="cottage"] {
+  --font-serif: "Libre Baskerville", "Times New Roman", serif;
+  --font-sans: "Libre Baskerville", serif;
+  --font-display: "Libre Baskerville", serif;
+  --radius: 1.8rem 2.6rem 1.4rem 2.8rem / 2.4rem 1.4rem 2.6rem 1.6rem;
+  --radius-btn: 999px;
+  --radius-photo: 40% 60% 40% 60% / 12% 12% 12% 12%;
+  --shadow: 0 18px 40px color-mix(in srgb, var(--raspberry) 12%, transparent);
+}
+html[data-theme="cottage"] body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 12px 12px, color-mix(in srgb, var(--raspberry) 28%, transparent) 1.4px, transparent 1.7px),
+    radial-gradient(circle at 36px 28px, color-mix(in srgb, var(--lemon) 32%, transparent) 1.2px, transparent 1.5px),
+    radial-gradient(circle at 22px 40px, color-mix(in srgb, var(--raspberry) 18%, transparent) 2.2px, transparent 2.5px);
+  background-size: 48px 48px, 48px 48px, 48px 48px;
+}
+html[data-theme="cottage"] .hero {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+html[data-theme="cottage"] h1,
+html[data-theme="cottage"] h2 {
+  font-weight: 400;
+}
+html[data-theme="cottage"] .hero-photo,
+html[data-theme="cottage"] .menu-card,
+html[data-theme="cottage"] .shot,
+html[data-theme="cottage"] .order-panel,
+html[data-theme="cottage"] .note {
+  border: 2px dashed color-mix(in srgb, var(--raspberry) 45%, var(--chocolate));
+  box-shadow:
+    inset 0 0 0 6px var(--paper),
+    inset 0 0 0 8px color-mix(in srgb, var(--raspberry) 35%, var(--paper)),
+    var(--shadow);
+  background: var(--paper);
+}
+html[data-theme="cottage"] .eyebrow {
+  font-style: italic;
+  letter-spacing: 0.2em;
+}
+html[data-theme="cottage"] .btn {
+  border: 2px dashed var(--chocolate);
+}
+
+@import url("theme-kit-more3.css");
