@@ -1,5 +1,18 @@
 /* Look studio designs C: awning chalkboard ticket window zine */
 
+/* Decorative layout hooks — hidden unless a design turns them on */
+.shop-banner,
+.shop-banner-2,
+.hero-banner,
+.layout-rail,
+.layout-stamp,
+.layout-ticket-perf {
+  display: none;
+  pointer-events: none;
+}
+.shop-banner i,
+.shop-banner-label { display: none; }
+
 /* awning — market stall, striped fabric, stacked shop, cakes in a row */
 html[data-theme='awning']{
   --font-serif:'Bebas Neue',sans-serif;
