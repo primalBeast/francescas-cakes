@@ -1,0 +1,360 @@
+/* Look studio designs 2/2 */
+
+/* brutal — huge sharp type, cream blocks on cocoa, no cute */
+html[data-theme="brutal"] {
+  --font-serif: "Archivo Black", "Impact", sans-serif;
+  --font-sans: "Figtree", "Arial", sans-serif;
+  --font-display: "Archivo Black", sans-serif;
+  --radius: 0;
+  --radius-btn: 0;
+  --radius-photo: 0;
+  --shadow: 8px 8px 0 var(--chocolate);
+}
+html[data-theme="brutal"] body {
+  background: var(--chocolate);
+  color: var(--cream);
+}
+html[data-theme="brutal"] .site-header {
+  background: var(--chocolate);
+  border-bottom: 4px solid var(--cream);
+}
+html[data-theme="brutal"] .logo {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-size: 1.15rem;
+}
+html[data-theme="brutal"] .logo span { color: var(--lemon); }
+html[data-theme="brutal"] nav a { color: var(--cream); }
+html[data-theme="brutal"] .hero {
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+  padding-top: 2rem;
+}
+html[data-theme="brutal"] h1 {
+  font-size: clamp(3.1rem, 10vw, 6.8rem);
+  line-height: 0.82;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+  max-width: 12ch;
+}
+html[data-theme="brutal"] h1 em {
+  font-style: normal;
+  color: var(--lemon);
+}
+html[data-theme="brutal"] h2 {
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  line-height: 0.9;
+  color: var(--cream);
+}
+html[data-theme="brutal"] .lede,
+html[data-theme="brutal"] .muted,
+html[data-theme="brutal"] .eyebrow,
+html[data-theme="brutal"] footer {
+  color: color-mix(in srgb, var(--cream) 75%, var(--malt));
+}
+html[data-theme="brutal"] .menu-card,
+html[data-theme="brutal"] .order-panel,
+html[data-theme="brutal"] .shot,
+html[data-theme="brutal"] .note,
+html[data-theme="brutal"] .choice,
+html[data-theme="brutal"] .confirm {
+  background: var(--cream);
+  color: var(--chocolate);
+  border: 3px solid var(--chocolate);
+  box-shadow: 8px 8px 0 var(--lemon);
+}
+html[data-theme="brutal"] .menu-card p,
+html[data-theme="brutal"] .shot figcaption,
+html[data-theme="brutal"] .hero-photo figcaption {
+  color: var(--chocolate);
+  background: var(--cream);
+}
+html[data-theme="brutal"] .hero-photo {
+  border: 3px solid var(--cream);
+  box-shadow: 10px 10px 0 var(--lemon);
+}
+html[data-theme="brutal"] .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 4px 4px 0 var(--lemon);
+  background: var(--cream);
+  color: var(--chocolate);
+}
+html[data-theme="brutal"] .btn.ghost {
+  background: transparent;
+  color: var(--cream);
+  border: 3px solid var(--cream);
+  box-shadow: none;
+}
+html[data-theme="brutal"] input,
+html[data-theme="brutal"] select {
+  border: 3px solid var(--chocolate);
+  background: var(--cream);
+  color: var(--chocolate);
+}
+
+/* cottage — vintage floral, ruffles, serif, lace borders */
+html[data-theme="cottage"] {
+  --font-serif: "Libre Baskerville", "Times New Roman", serif;
+  --font-sans: "Libre Baskerville", serif;
+  --font-display: "Libre Baskerville", serif;
+  --radius: 1.8rem 2.6rem 1.4rem 2.8rem / 2.4rem 1.4rem 2.6rem 1.6rem;
+  --radius-btn: 999px;
+  --radius-photo: 40% 60% 40% 60% / 12% 12% 12% 12%;
+  --shadow: 0 18px 40px color-mix(in srgb, var(--raspberry) 12%, transparent);
+}
+html[data-theme="cottage"] body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 12px 12px, color-mix(in srgb, var(--raspberry) 28%, transparent) 1.4px, transparent 1.7px),
+    radial-gradient(circle at 36px 28px, color-mix(in srgb, var(--lemon) 32%, transparent) 1.2px, transparent 1.5px),
+    radial-gradient(circle at 22px 40px, color-mix(in srgb, var(--raspberry) 18%, transparent) 2.2px, transparent 2.5px);
+  background-size: 48px 48px, 48px 48px, 48px 48px;
+}
+html[data-theme="cottage"] .hero {
+  grid-template-columns: 0.95fr 1.05fr;
+}
+html[data-theme="cottage"] h1,
+html[data-theme="cottage"] h2 {
+  font-weight: 400;
+}
+html[data-theme="cottage"] .hero-photo,
+html[data-theme="cottage"] .menu-card,
+html[data-theme="cottage"] .shot,
+html[data-theme="cottage"] .order-panel,
+html[data-theme="cottage"] .note {
+  border: 2px dashed color-mix(in srgb, var(--raspberry) 45%, var(--chocolate));
+  box-shadow:
+    inset 0 0 0 6px var(--paper),
+    inset 0 0 0 8px color-mix(in srgb, var(--raspberry) 35%, var(--paper)),
+    var(--shadow);
+  background: var(--paper);
+}
+html[data-theme="cottage"] .eyebrow {
+  font-style: italic;
+  letter-spacing: 0.2em;
+}
+html[data-theme="cottage"] .btn {
+  border: 2px dashed var(--chocolate);
+}
+
+/* neon — near-black, neon raspberry + lemon, inverted hero */
+html[data-theme="neon"] {
+  --font-serif: "Syne", "Figtree", sans-serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Syne", sans-serif;
+  --radius: 0.4rem;
+  --radius-btn: 0.35rem;
+  --radius-photo: 0.4rem;
+  --shadow: 0 0 28px color-mix(in srgb, var(--raspberry) 55%, transparent);
+}
+html[data-theme="neon"] body {
+  background:
+    radial-gradient(600px 400px at 15% 10%, color-mix(in srgb, var(--raspberry) 28%, transparent), transparent 50%),
+    radial-gradient(700px 420px at 90% 0%, color-mix(in srgb, var(--lemon) 22%, transparent), transparent 52%),
+    color-mix(in srgb, var(--chocolate) 70%, #000);
+  color: var(--cream);
+}
+html[data-theme="neon"] .site-header {
+  background: color-mix(in srgb, #000 70%, var(--chocolate));
+  border-bottom: 1px solid color-mix(in srgb, var(--raspberry) 55%, transparent);
+}
+html[data-theme="neon"] .logo { color: var(--cream); }
+html[data-theme="neon"] .logo span {
+  color: var(--raspberry);
+  text-shadow: 0 0 16px var(--raspberry);
+}
+html[data-theme="neon"] h1,
+html[data-theme="neon"] h2 {
+  color: var(--cream);
+  letter-spacing: -0.05em;
+  font-weight: 800;
+}
+html[data-theme="neon"] h1 em {
+  color: var(--lemon);
+  font-style: normal;
+  text-shadow: 0 0 22px var(--lemon);
+}
+html[data-theme="neon"] .lede,
+html[data-theme="neon"] .muted,
+html[data-theme="neon"] nav a,
+html[data-theme="neon"] .eyebrow,
+html[data-theme="neon"] footer {
+  color: color-mix(in srgb, var(--cream) 70%, var(--malt));
+}
+html[data-theme="neon"] .hero {
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+html[data-theme="neon"] .hero-photo {
+  mix-blend-mode: luminosity;
+  filter: contrast(1.08) saturate(0.7);
+  border: 1px solid color-mix(in srgb, var(--lemon) 50%, transparent);
+  box-shadow: 0 0 40px color-mix(in srgb, var(--raspberry) 35%, transparent);
+}
+html[data-theme="neon"] .hero-copy {
+  background: color-mix(in srgb, #000 45%, transparent);
+  padding: 1.4rem;
+  border: 1px solid color-mix(in srgb, var(--raspberry) 40%, transparent);
+}
+html[data-theme="neon"] .menu-card,
+html[data-theme="neon"] .order-panel,
+html[data-theme="neon"] .shot,
+html[data-theme="neon"] .note,
+html[data-theme="neon"] .choice {
+  background: color-mix(in srgb, #000 55%, var(--chocolate));
+  color: var(--cream);
+  border: 1px solid color-mix(in srgb, var(--raspberry) 40%, transparent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--raspberry) 18%, transparent);
+}
+html[data-theme="neon"] .menu-card p,
+html[data-theme="neon"] .shot figcaption,
+html[data-theme="neon"] .hero-photo figcaption,
+html[data-theme="neon"] .choice small {
+  color: color-mix(in srgb, var(--cream) 75%, var(--malt));
+  background: transparent;
+}
+html[data-theme="neon"] .hero-photo figcaption {
+  background: #000;
+}
+html[data-theme="neon"] .btn {
+  background: var(--raspberry);
+  color: #fff;
+  box-shadow: 0 0 22px color-mix(in srgb, var(--raspberry) 55%, transparent);
+}
+html[data-theme="neon"] .btn.ghost {
+  background: transparent;
+  color: var(--lemon);
+  border: 1px solid var(--lemon);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--lemon) 35%, transparent);
+}
+html[data-theme="neon"] input,
+html[data-theme="neon"] select {
+  background: #0b0b0c;
+  color: var(--cream);
+  border-color: color-mix(in srgb, var(--lemon) 35%, transparent);
+}
+html[data-theme="neon"] .steps span.on {
+  background: var(--raspberry);
+  color: #fff;
+  box-shadow: 0 0 12px var(--raspberry);
+}
+
+/* wabi — quiet paper, thin lines, lots of air, stone + cream */
+html[data-theme="wabi"] {
+  --font-serif: "Newsreader", "Times New Roman", serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Newsreader", serif;
+  --radius: 0.15rem;
+  --radius-btn: 0.15rem;
+  --radius-photo: 0.15rem;
+  --shadow: none;
+}
+html[data-theme="wabi"] body {
+  background: var(--paper);
+  color: var(--chocolate);
+}
+html[data-theme="wabi"] .site-header {
+  background: var(--paper);
+  border-bottom: 1px solid color-mix(in srgb, var(--chocolate) 18%, transparent);
+}
+html[data-theme="wabi"] .wrap {
+  width: min(980px, calc(100% - 3rem));
+}
+html[data-theme="wabi"] .hero {
+  grid-template-columns: 1fr;
+  max-width: 36rem;
+  gap: 2.8rem;
+  padding: 4.5rem 0 3rem;
+}
+html[data-theme="wabi"] h1 {
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+html[data-theme="wabi"] h1 em { font-style: italic; color: var(--malt); }
+html[data-theme="wabi"] h2 { font-weight: 300; }
+html[data-theme="wabi"] .section { padding: 4.2rem 0; }
+html[data-theme="wabi"] .hero-photo,
+html[data-theme="wabi"] .menu-card,
+html[data-theme="wabi"] .shot,
+html[data-theme="wabi"] .theme-shot,
+html[data-theme="wabi"] .order-panel,
+html[data-theme="wabi"] .note {
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--chocolate) 16%, transparent);
+  background: var(--paper);
+}
+html[data-theme="wabi"] .btn {
+  box-shadow: none;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+html[data-theme="wabi"] .eyebrow {
+  letter-spacing: 0.22em;
+  font-weight: 500;
+}
+
+/* carnival — maximal birthday, dots, playful, still a cake shop */
+html[data-theme="carnival"] {
+  --font-serif: "Fredoka", "Figtree", sans-serif;
+  --font-sans: "Fredoka", "Figtree", sans-serif;
+  --font-display: "Fredoka", sans-serif;
+  --radius: 1.8rem;
+  --radius-btn: 999px;
+  --radius-photo: 1.8rem;
+  --shadow: 0 12px 0 color-mix(in srgb, var(--raspberry) 55%, var(--chocolate));
+}
+html[data-theme="carnival"] body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 10px 10px, var(--raspberry) 2.1px, transparent 2.3px),
+    radial-gradient(circle at 32px 28px, var(--lemon) 2.4px, transparent 2.6px),
+    radial-gradient(circle at 50px 12px, var(--chocolate) 1.5px, transparent 1.7px);
+  background-size: 56px 56px;
+}
+html[data-theme="carnival"] .hero {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+html[data-theme="carnival"] h1 {
+  font-weight: 600;
+  line-height: 0.95;
+}
+html[data-theme="carnival"] h1 em {
+  color: var(--raspberry);
+  font-style: normal;
+}
+html[data-theme="carnival"] .menu-card:nth-child(1) { transform: rotate(-1.4deg); }
+html[data-theme="carnival"] .menu-card:nth-child(2) { transform: rotate(1.1deg); }
+html[data-theme="carnival"] .menu-card:nth-child(3) { transform: rotate(-0.7deg); }
+html[data-theme="carnival"] .menu-card:hover { transform: rotate(0deg) translateY(-4px); }
+html[data-theme="carnival"] .menu-card,
+html[data-theme="carnival"] .shot,
+html[data-theme="carnival"] .order-panel {
+  border: 3px solid var(--chocolate);
+  box-shadow: 0 10px 0 var(--raspberry);
+}
+html[data-theme="carnival"] .btn {
+  border: 3px solid var(--chocolate);
+  box-shadow: 0 5px 0 var(--lemon);
+}
+html[data-theme="carnival"] .pill {
+  background: var(--raspberry);
+  color: var(--paper);
+}
+
+/* ------------------------------------------------------------------ */
+/* Type — swap --serif / --sans after designs set font stacks          */
+/* ------------------------------------------------------------------ */
+html[data-type="serif"] {
+  --serif: var(--font-serif);
+  --sans: var(--font-sans);
+}
