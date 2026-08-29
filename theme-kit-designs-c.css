@@ -1,0 +1,221 @@
+/* Look studio designs C: awning chalkboard ticket window zine */
+
+/* awning — market stall, striped fabric, stacked shop, cakes in a row */
+html[data-theme='awning']{
+  --font-serif:'Bebas Neue',sans-serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Bebas Neue',sans-serif;
+  --radius:.35rem;--radius-btn:.25rem;--radius-photo:.25rem;
+  --shadow:0 10px 0 color-mix(in srgb,var(--chocolate) 18%,transparent);
+}
+html[data-theme='awning'] body{
+  background:
+    repeating-linear-gradient(90deg,color-mix(in srgb,var(--lemon) 22%,var(--cream)) 0 18px,var(--cream) 18px 36px);
+}
+html[data-theme='awning'] .shop-banner{
+  display:block;height:3.1rem;
+  background:repeating-linear-gradient(90deg,var(--raspberry) 0 22px,var(--paper) 22px 44px,var(--chocolate) 44px 66px,var(--lemon) 66px 88px);
+  box-shadow:0 10px 18px color-mix(in srgb,var(--chocolate) 28%,transparent);
+}
+html[data-theme='awning'] .site-header{
+  flex-direction:column;align-items:center;gap:.45rem;padding:1.1rem 0 .8rem;background:var(--paper);border-bottom:0;
+}
+html[data-theme='awning'] .logo{font-size:2rem;letter-spacing:.12em;text-transform:uppercase}
+html[data-theme='awning'] nav{gap:1.4rem;text-transform:uppercase;letter-spacing:.14em;font-size:.72rem}
+html[data-theme='awning'] .hero{grid-template-columns:1fr;text-align:center;gap:1.2rem;padding-top:1.4rem}
+html[data-theme='awning'] .lede{margin-inline:auto}
+html[data-theme='awning'] .hero-actions{justify-content:center}
+html[data-theme='awning'] .hero-photo{max-width:28rem;margin-inline:auto;border:4px solid var(--paper)}
+html[data-theme='awning'] .menu-grid{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:.8rem;padding:.4rem 0 1rem}
+html[data-theme='awning'] .menu-card{flex:0 0 16.5rem;background:var(--paper);border:2px solid var(--chocolate)}
+html[data-theme='awning'] .theme-grid{display:flex;overflow-x:auto;gap:.7rem}
+html[data-theme='awning'] .theme-shot{flex:0 0 14rem}
+html[data-theme='awning'] footer{text-align:center;background:var(--chocolate);color:var(--paper);border:0;margin:0;padding:1.4rem;width:100%;max-width:none}
+html[data-theme='awning'] footer.wrap{width:100%}
+
+/* chalkboard — cafe board, dark slate, menu as a list, no banner */
+html[data-theme='chalkboard']{
+  --font-serif:'Kalam',cursive;
+  --font-sans:'Kalam',cursive;
+  --font-display:'Caveat',cursive;
+  --radius:0;--radius-btn:.2rem;--radius-photo:.2rem;--shadow:none;
+}
+html[data-theme='chalkboard'] body{
+  background:
+    radial-gradient(circle at 20% 10%,color-mix(in srgb,var(--lemon) 8%,transparent),transparent 40%),
+    color-mix(in srgb,var(--chocolate) 88%,#142016);
+  color:var(--cream);
+}
+html[data-theme='chalkboard'] .site-header{
+  background:transparent;border-bottom:1px dashed color-mix(in srgb,var(--cream) 35%,transparent);
+  justify-content:center;flex-direction:column;gap:.35rem;padding:1.4rem 0 .9rem;
+}
+html[data-theme='chalkboard'] .logo,html[data-theme='chalkboard'] h1,html[data-theme='chalkboard'] h2,html[data-theme='chalkboard'] h3,html[data-theme='chalkboard'] .price{color:var(--cream)}
+html[data-theme='chalkboard'] .logo span{color:var(--lemon)}
+html[data-theme='chalkboard'] h1 em{color:var(--lemon);font-style:normal}
+html[data-theme='chalkboard'] nav a,html[data-theme='chalkboard'] .lede,html[data-theme='chalkboard'] .muted,html[data-theme='chalkboard'] .eyebrow,html[data-theme='chalkboard'] footer{color:color-mix(in srgb,var(--cream) 78%,var(--lemon))}
+html[data-theme='chalkboard'] .hero{grid-template-columns:1fr;text-align:center;max-width:38rem;margin-inline:auto}
+html[data-theme='chalkboard'] .hero-actions{justify-content:center}
+html[data-theme='chalkboard'] .hero-photo{border:2px solid color-mix(in srgb,var(--cream) 35%,transparent);box-shadow:none;background:transparent;max-width:22rem;margin-inline:auto}
+html[data-theme='chalkboard'] .hero-photo figcaption{background:transparent;color:var(--cream)}
+html[data-theme='chalkboard'] .menu-grid{
+  display:flex;flex-direction:column;max-width:34rem;margin:1.2rem auto 0;gap:0;
+  border-top:1px dashed color-mix(in srgb,var(--cream) 32%,transparent);
+}
+html[data-theme='chalkboard'] .menu-card{
+  flex-direction:row;align-items:center;background:transparent;border:0;border-bottom:1px dashed color-mix(in srgb,var(--cream) 32%,transparent);
+  border-radius:0;box-shadow:none;color:var(--cream);
+}
+html[data-theme='chalkboard'] .menu-card img{width:3.1rem;height:3.1rem;border-radius:50%;margin:.7rem .9rem;flex:0 0 3.1rem}
+html[data-theme='chalkboard'] .menu-card p,html[data-theme='chalkboard'] .shot figcaption{color:color-mix(in srgb,var(--cream) 75%,var(--malt));background:transparent}
+html[data-theme='chalkboard'] .menu-card:hover{transform:none}
+html[data-theme='chalkboard'] .order-panel,html[data-theme='chalkboard'] .shot,html[data-theme='chalkboard'] .note,html[data-theme='chalkboard'] .choice,html[data-theme='chalkboard'] .confirm{
+  background:color-mix(in srgb,var(--chocolate) 40%,#000);color:var(--cream);border:1px dashed color-mix(in srgb,var(--cream) 28%,transparent);box-shadow:none;
+}
+html[data-theme='chalkboard'] .btn{background:var(--lemon);color:var(--chocolate);box-shadow:none}
+html[data-theme='chalkboard'] .btn.ghost{background:transparent;color:var(--lemon);border-color:var(--lemon)}
+html[data-theme='chalkboard'] input,html[data-theme='chalkboard'] select{background:#1b241c;color:var(--cream);border-color:color-mix(in srgb,var(--cream) 25%,transparent)}
+html[data-theme='chalkboard'] footer{text-align:center;border-top:1px dashed color-mix(in srgb,var(--cream) 32%,transparent)}
+
+/* ticket — bakery stub, perforated rail, stacked receipt hero */
+html[data-theme='ticket']{
+  --font-serif:'IBM Plex Mono',monospace;
+  --font-sans:'IBM Plex Mono',monospace;
+  --font-display:'IBM Plex Mono',monospace;
+  --radius:0;--radius-btn:0;--radius-photo:0;--shadow:none;
+}
+html[data-theme='ticket'] body{background:var(--cream);padding-left:2.1rem}
+html[data-theme='ticket'] .layout-ticket-perf{
+  display:block;position:fixed;left:0;top:var(--look-bar-h);bottom:0;width:1.7rem;z-index:15;
+  background:repeating-linear-gradient(to bottom,var(--raspberry) 0 9px,var(--paper) 9px 18px,var(--chocolate) 18px 27px);
+  border-right:1px dashed var(--chocolate);
+}
+html[data-theme='ticket'] .layout-ticket-perf::after{
+  content:'';position:absolute;right:-6px;top:0;bottom:0;width:12px;
+  background:radial-gradient(circle at 0 8px,transparent 5px,var(--cream) 6px) 0 0/12px 16px;
+}
+html[data-theme='ticket'] .site-header{
+  flex-direction:column;align-items:flex-start;gap:.2rem;background:var(--paper);
+  border-bottom:2px dashed var(--chocolate);max-width:32rem;margin:0 auto;width:calc(100% - 2rem);padding:.8rem 1rem;
+}
+html[data-theme='ticket'] .logo{font-size:.95rem;letter-spacing:.18em;text-transform:uppercase}
+html[data-theme='ticket'] nav{font-size:.72rem;gap:.8rem;text-transform:uppercase}
+html[data-theme='ticket'] .hero{
+  grid-template-columns:1fr;max-width:32rem;margin:1.2rem auto;background:var(--paper);
+  border:1px solid var(--chocolate);padding:1.2rem 1.3rem 1.4rem;gap:.9rem;
+}
+html[data-theme='ticket'] .hero-photo{order:4;border:0;box-shadow:none}
+html[data-theme='ticket'] .hero-photo img{height:11rem}
+html[data-theme='ticket'] h1{font-size:clamp(1.4rem,4vw,2.1rem);letter-spacing:0;text-transform:uppercase}
+html[data-theme='ticket'] .menu-grid{display:flex;flex-direction:column;max-width:32rem;margin-inline:auto;gap:0}
+html[data-theme='ticket'] .menu-card{
+  flex-direction:row;align-items:center;border:0;border-bottom:1px dotted var(--chocolate);
+  border-radius:0;box-shadow:none;background:transparent;
+}
+html[data-theme='ticket'] .menu-card img{width:4.2rem;height:4.2rem;flex:0 0 4.2rem}
+html[data-theme='ticket'] .menu-card:hover{transform:none}
+html[data-theme='ticket'] .order-panel{border:1px dashed var(--chocolate);box-shadow:none;max-width:32rem}
+html[data-theme='ticket'] .mosaic{grid-template-columns:1fr 1fr;max-width:32rem}
+html[data-theme='ticket'] .shot.wide,.shot.tall{grid-column:auto}
+html[data-theme='ticket'] footer{
+  max-width:32rem;margin:0 auto;text-align:center;border-top:2px dashed var(--chocolate);
+  font-family:'IBM Plex Mono',monospace;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;
+}
+html[data-theme='ticket'] .btn{letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;box-shadow:none}
+
+/* window — shop glass, photo behind type, OPEN ribbon, door-frame nav */
+html[data-theme='window']{
+  --font-serif:'Abril Fatface',serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Abril Fatface',serif;
+  --radius:0;--radius-btn:0;--radius-photo:0;--shadow:none;
+}
+html[data-theme='window'] body{background:var(--chocolate);color:var(--cream)}
+html[data-theme='window'] .site-header{
+  flex-direction:column;align-items:center;gap:.25rem;padding:.45rem 0 0;background:var(--cream);border:0;
+}
+html[data-theme='window'] .logo{color:var(--chocolate);font-size:1.1rem;letter-spacing:.08em}
+html[data-theme='window'] .logo span{color:var(--raspberry)}
+html[data-theme='window'] nav{
+  display:flex;justify-content:center;gap:1.5rem;min-width:min(92vw,38rem);
+  border:12px solid var(--chocolate);border-bottom:0;padding:.45rem 1.8rem .2rem;background:var(--paper);
+}
+html[data-theme='window'] nav a{color:var(--chocolate);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem}
+html[data-theme='window'] .hero{
+  display:grid;grid-template-columns:1fr;position:relative;padding:0;width:100%;max-width:none;min-height:32rem;
+}
+html[data-theme='window'] .hero.wrap{width:100%}
+html[data-theme='window'] .hero-photo{grid-area:1/1;border:0;border-radius:0}
+html[data-theme='window'] .hero-photo img{height:36rem;filter:saturate(.9) contrast(1.05)}
+html[data-theme='window'] .hero-photo figcaption{display:none}
+html[data-theme='window'] .hero-copy{
+  grid-area:1/1;z-index:2;align-self:end;padding:2.4rem 1.4rem 2rem;
+  background:linear-gradient(transparent,color-mix(in srgb,var(--chocolate) 82%,transparent) 55%);
+  color:var(--paper);
+}
+html[data-theme='window'] .hero-copy h1,html[data-theme='window'] .hero-copy .lede,html[data-theme='window'] .hero-copy .eyebrow{color:var(--paper)}
+html[data-theme='window'] .hero-copy h1 em{color:var(--lemon)}
+html[data-theme='window'] .hero-banner{
+  display:block;position:absolute;top:1.2rem;right:0;z-index:3;
+  background:var(--raspberry);color:var(--paper);padding:.4rem 1.5rem .4rem 1.1rem;
+  font-family:var(--font-sans);font-weight:700;letter-spacing:.22em;font-size:.78rem;
+}
+html[data-theme='window'] .hero-banner::before{content:'OPEN'}
+html[data-theme='window'] .menu-grid{gap:.35rem}
+html[data-theme='window'] .menu-card{border:6px solid var(--chocolate);border-radius:0;background:var(--paper)}
+html[data-theme='window'] .menu-card,html[data-theme='window'] .order-panel,html[data-theme='window'] .shot,html[data-theme='window'] .note,html[data-theme='window'] .choice{color:var(--chocolate)}
+html[data-theme='window'] h2,html[data-theme='window'] h3{color:var(--cream)}
+html[data-theme='window'] .section h2{color:var(--cream)}
+html[data-theme='window'] .eyebrow{color:var(--lemon)}
+html[data-theme='window'] .muted{color:color-mix(in srgb,var(--cream) 70%,var(--malt))}
+html[data-theme='window'] .btn{background:var(--lemon);color:var(--chocolate)}
+html[data-theme='window'] .btn.ghost{color:var(--paper);border-color:var(--paper)}
+html[data-theme='window'] footer{background:var(--cream);color:var(--chocolate);border:0;text-align:center}
+
+/* zine — cut-and-paste, offset cards, diagonal washi, collage */
+html[data-theme='zine']{
+  --font-serif:'Permanent Marker',cursive;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Permanent Marker',cursive;
+  --radius:.2rem;--radius-btn:.2rem;--radius-photo:.15rem;
+  --shadow:6px 6px 0 var(--chocolate);
+}
+html[data-theme='zine'] body{
+  background:
+    repeating-linear-gradient(0deg,transparent,transparent 31px,color-mix(in srgb,var(--chocolate) 7%,transparent) 32px),
+    var(--paper);
+}
+html[data-theme='zine'] .shop-banner{
+  display:block;height:1.7rem;margin:.35rem -4vw 0;
+  background:repeating-linear-gradient(-22deg,var(--lemon) 0 14px,var(--raspberry) 14px 28px,var(--paper) 28px 36px,var(--chocolate) 36px 40px);
+  transform:rotate(-3.2deg);transform-origin:center;
+}
+html[data-theme='zine'] .site-header{
+  background:transparent;border:0;transform:rotate(-1deg);padding-top:1.1rem;
+}
+html[data-theme='zine'] .logo{transform:rotate(-2deg)}
+html[data-theme='zine'] .hero{grid-template-columns:1.05fr .95fr;align-items:start;position:relative}
+html[data-theme='zine'] .hero-copy{
+  position:relative;z-index:2;background:var(--paper);padding:1.1rem 1.2rem;
+  transform:rotate(-2deg) translate(8%,22%);border:2px solid var(--chocolate);box-shadow:8px 8px 0 var(--raspberry);
+}
+html[data-theme='zine'] .hero-photo{transform:rotate(3deg);border:3px solid var(--chocolate)}
+html[data-theme='zine'] .menu-grid{align-items:start}
+html[data-theme='zine'] .menu-card{border:2px solid var(--chocolate)}
+html[data-theme='zine'] .menu-card:nth-child(1){transform:translate(10px,14px) rotate(-3.4deg)}
+html[data-theme='zine'] .menu-card:nth-child(2){transform:translate(-8px,-10px) rotate(2.2deg);z-index:1}
+html[data-theme='zine'] .menu-card:nth-child(3){transform:translate(6px,8px) rotate(-1.6deg)}
+html[data-theme='zine'] .shot:nth-child(odd){transform:rotate(-2.4deg)}
+html[data-theme='zine'] .shot:nth-child(even){transform:rotate(1.8deg)}
+html[data-theme='zine'] .mosaic{gap:.35rem}
+html[data-theme='zine'] footer{border-top:0;background:var(--lemon);color:var(--chocolate);transform:rotate(-.6deg);text-align:center;font-family:var(--font-display)}
+html[data-theme='zine'] h1{font-size:clamp(2rem,6vw,3.4rem);line-height:.95}
+
+@media (max-width:840px){
+  html[data-theme='window'] nav{display:flex;flex-wrap:wrap;min-width:0;border-width:8px}
+  html[data-theme='window'] .hero-photo img{height:22rem}
+  html[data-theme='awning'] .menu-grid{flex-wrap:wrap}
+  html[data-theme='ticket'] body{padding-left:1.4rem}
+  html[data-theme='zine'] .hero,html[data-theme='zine'] .hero-copy,html[data-theme='zine'] .hero-photo{transform:none}
+  html[data-theme='chalkboard'] .hero,html[data-theme='ticket'] .hero,html[data-theme='awning'] .hero{grid-template-columns:1fr}
+}
