@@ -1,0 +1,202 @@
+/* Look studio designs D: linen pastrycase recipe drip picnic */
+
+/* linen — quiet tablecloth, no banner, single column, tiny type */
+html[data-theme='linen']{
+  --font-serif:'Spectral',serif;
+  --font-sans:'Spectral',serif;
+  --font-display:'Spectral',serif;
+  --radius:.15rem;--radius-btn:.15rem;--radius-photo:.15rem;--shadow:none;
+}
+html[data-theme='linen'] body{
+  background:var(--paper);font-size:.88rem;letter-spacing:.01em;
+}
+html[data-theme='linen'] .wrap{width:min(620px,calc(100% - 4.8rem))}
+html[data-theme='linen'] .site-header{
+  background:transparent;border-bottom:0;justify-content:center;flex-direction:column;gap:.4rem;padding:2.4rem 0 1rem;
+}
+html[data-theme='linen'] .logo{font-size:.95rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase}
+html[data-theme='linen'] .logo span{color:inherit}
+html[data-theme='linen'] nav{font-size:.72rem;gap:1.1rem;letter-spacing:.12em}
+html[data-theme='linen'] .hero{grid-template-columns:1fr;text-align:center;gap:1.8rem;padding:3rem 0 2rem}
+html[data-theme='linen'] h1{font-size:clamp(1.65rem,4vw,2.45rem);font-weight:400;letter-spacing:.04em}
+html[data-theme='linen'] h2{font-size:clamp(1.2rem,3vw,1.7rem);font-weight:400}
+html[data-theme='linen'] .lede{margin-inline:auto;font-size:.95rem}
+html[data-theme='linen'] .hero-actions{justify-content:center}
+html[data-theme='linen'] .hero-photo{max-width:22rem;margin-inline:auto;box-shadow:none;border:0}
+html[data-theme='linen'] .hero-photo img{height:16rem;opacity:.92}
+html[data-theme='linen'] .menu-grid,.theme-grid,.mosaic{grid-template-columns:1fr;gap:1.8rem}
+html[data-theme='linen'] .menu-card,.shot,.order-panel,.note,.theme-shot{box-shadow:none;border:0;background:transparent}
+html[data-theme='linen'] .menu-card img,.theme-shot img,.shot img{height:14rem;opacity:.9}
+html[data-theme='linen'] .section{padding:3.2rem 0}
+html[data-theme='linen'] .btn{box-shadow:none;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;padding:.7rem 1.1rem}
+html[data-theme='linen'] footer{text-align:center;border:0;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:3rem 0}
+html[data-theme='linen'] .about{grid-template-columns:1fr}
+
+/* pastrycase — glass case, metal strip, photo-led, horizontal cakes */
+html[data-theme='pastrycase']{
+  --font-serif:'Cormorant Garamond',serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Cormorant Garamond',serif;
+  --radius:0;--radius-btn:0;--radius-photo:0;
+  --shadow:0 8px 24px color-mix(in srgb,var(--chocolate) 16%,transparent);
+}
+html[data-theme='pastrycase'] body{
+  background:linear-gradient(180deg,color-mix(in srgb,var(--malt) 18%,var(--paper)),var(--paper) 28%);
+}
+html[data-theme='pastrycase'] .shop-banner{
+  display:block;height:11px;
+  background:linear-gradient(var(--paper),var(--malt) 42%,var(--cream) 50%,var(--chocolate));
+  box-shadow:0 2px 0 color-mix(in srgb,var(--chocolate) 55%,black);
+}
+html[data-theme='pastrycase'] .site-header{
+  background:color-mix(in srgb,var(--paper) 70%,var(--malt));border-bottom:1px solid var(--chocolate);
+  padding:.55rem 0;align-items:center;
+}
+html[data-theme='pastrycase'] .logo{font-size:1.15rem;letter-spacing:.06em}
+html[data-theme='pastrycase'] nav{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase}
+html[data-theme='pastrycase'] .hero{grid-template-columns:1.4fr .6fr;gap:1.2rem;align-items:stretch;padding:1.1rem 0}
+html[data-theme='pastrycase'] .hero-photo{order:-1;border:1px solid color-mix(in srgb,var(--chocolate) 25%,transparent)}
+html[data-theme='pastrycase'] .hero-photo img{height:26rem}
+html[data-theme='pastrycase'] .menu-grid{
+  display:flex;flex-wrap:nowrap;overflow-x:auto;scroll-snap-type:x mandatory;gap:0;margin-top:1rem;
+  border:8px solid color-mix(in srgb,var(--malt) 40%,var(--chocolate));background:color-mix(in srgb,var(--paper) 50%,white);
+}
+html[data-theme='pastrycase'] .menu-card{
+  flex:0 0 17.5rem;scroll-snap-align:start;border:0;border-right:1px solid var(--line);border-radius:0;box-shadow:none;
+}
+html[data-theme='pastrycase'] .menu-card img{height:14rem}
+html[data-theme='pastrycase'] .theme-grid{display:flex;overflow-x:auto;gap:.4rem}
+html[data-theme='pastrycase'] .theme-shot{flex:0 0 15rem;border-radius:0}
+html[data-theme='pastrycase'] footer{border-top:11px solid transparent;border-image:linear-gradient(var(--paper),var(--malt) 42%,var(--chocolate)) 1;text-align:center}
+
+/* recipe — index cards, ruled paper, small kitchen banner */
+html[data-theme='recipe']{
+  --font-serif:'Caveat',cursive;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Caveat',cursive;
+  --radius:.2rem;--radius-btn:.2rem;--radius-photo:.2rem;
+  --shadow:3px 4px 0 color-mix(in srgb,var(--chocolate) 16%,transparent);
+}
+html[data-theme='recipe'] body{
+  background-color:var(--paper);
+  background-image:repeating-linear-gradient(var(--paper) 0 27px,color-mix(in srgb,var(--raspberry) 22%,var(--paper)) 28px 29px);
+}
+html[data-theme='recipe'] .shop-banner{
+  display:flex;justify-content:flex-end;align-items:center;background:transparent;height:auto;padding:.35rem 1rem 0;
+}
+html[data-theme='recipe'] .shop-banner-label{
+  display:inline-block;background:var(--lemon);color:var(--chocolate);padding:.2rem .7rem;transform:rotate(6deg);
+  font-family:var(--font-display);font-size:.95rem;box-shadow:2px 2px 0 var(--chocolate);
+}
+html[data-theme='recipe'] .shop-banner-label::before{content:'from the kitchen'}
+html[data-theme='recipe'] .site-header{
+  background:var(--paper);border:1px solid color-mix(in srgb,var(--chocolate) 22%,transparent);
+  max-width:42rem;margin:.6rem auto 0;width:calc(100% - 2rem);padding:.7rem 1rem;
+}
+html[data-theme='recipe'] .hero{
+  grid-template-columns:1fr;max-width:42rem;margin:1rem auto;background:var(--paper);
+  border:1px solid color-mix(in srgb,var(--chocolate) 20%,transparent);padding:1.3rem 1.4rem 1.5rem;
+  box-shadow:4px 5px 0 color-mix(in srgb,var(--chocolate) 12%,transparent);
+  background-image:linear-gradient(90deg,color-mix(in srgb,var(--raspberry) 35%,var(--paper)) 0 2px,transparent 2px);
+}
+html[data-theme='recipe'] .hero-photo{order:3;max-width:20rem}
+html[data-theme='recipe'] h1{font-size:clamp(2.2rem,6vw,3.4rem)}
+html[data-theme='recipe'] .menu-grid{grid-template-columns:1fr;max-width:42rem;margin-inline:auto;gap:1.1rem}
+html[data-theme='recipe'] .menu-card{
+  flex-direction:row;background:var(--paper);border:1px solid color-mix(in srgb,var(--chocolate) 20%,transparent);
+  background-image:linear-gradient(90deg,color-mix(in srgb,var(--raspberry) 35%,var(--paper)) 0 2px,transparent 2px);
+}
+html[data-theme='recipe'] .menu-card img{width:7.5rem;height:7.5rem;flex:0 0 7.5rem}
+html[data-theme='recipe'] .order-panel,.note,.shot{
+  background:var(--paper);border:1px solid color-mix(in srgb,var(--chocolate) 20%,transparent);
+}
+html[data-theme='recipe'] footer{max-width:42rem;margin-inline:auto;border-top:2px solid var(--chocolate);font-family:var(--font-display)}
+
+/* drip — icing scallop under header, split hero stays */
+html[data-theme='drip']{
+  --font-serif:'Fraunces',serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Fraunces',serif;
+  --radius:1.8rem 1.8rem .6rem .6rem;--radius-btn:999px;--radius-photo:1.8rem 1.8rem .4rem .4rem;
+}
+html[data-theme='drip'] body{background:var(--cream)}
+html[data-theme='drip'] .site-header{
+  background:var(--paper);border-bottom:0;box-shadow:none;
+}
+html[data-theme='drip'] .shop-banner-2{
+  display:block;height:28px;margin-top:-1px;
+  background-image:radial-gradient(circle at 50% 0,var(--paper) 14px,transparent 15px);
+  background-size:28px 28px;background-repeat:repeat-x;
+}
+html[data-theme='drip'] .hero{grid-template-columns:.92fr 1.08fr;gap:2rem}
+html[data-theme='drip'] .hero-photo{border:0;box-shadow:0 18px 40px color-mix(in srgb,var(--raspberry) 16%,transparent)}
+html[data-theme='drip'] .menu-card,html[data-theme='drip'] .shot,html[data-theme='drip'] .order-panel{
+  position:relative;border:0;overflow:visible;background:var(--paper);
+}
+html[data-theme='drip'] .menu-card::before,html[data-theme='drip'] .shot::before{
+  content:'';display:block;height:18px;margin-bottom:-2px;
+  background-image:radial-gradient(circle at 50% 0,var(--paper) 9px,transparent 10px);
+  background-size:18px 18px;background-repeat:repeat-x;
+  background-color:var(--raspberry);
+}
+html[data-theme='drip'] .menu-card img{border-radius:0}
+html[data-theme='drip'] h1 em{color:var(--raspberry)}
+html[data-theme='drip'] footer{
+  border-top:0;padding-top:1.4rem;
+  background-image:radial-gradient(circle at 50% 0,transparent 14px,var(--paper) 15px);
+  background-size:28px 28px;background-repeat:repeat-x;background-color:var(--cream);
+}
+
+/* picnic — gingham runner, two-col blanket, polaroids with tape */
+html[data-theme='picnic']{
+  --font-serif:'Fredoka',sans-serif;
+  --font-sans:'Figtree',sans-serif;
+  --font-display:'Fredoka',sans-serif;
+  --radius:.4rem;--radius-btn:999px;--radius-photo:.2rem;
+}
+html[data-theme='picnic'] body{
+  background-color:var(--cream);
+  background-image:
+    repeating-linear-gradient(90deg,color-mix(in srgb,var(--raspberry) 14%,transparent) 0 16px,transparent 16px 32px),
+    repeating-linear-gradient(0deg,color-mix(in srgb,var(--raspberry) 12%,transparent) 0 16px,transparent 16px 32px);
+}
+html[data-theme='picnic'] .shop-banner{
+  display:block;height:2.4rem;
+  background:
+    repeating-linear-gradient(90deg,var(--raspberry) 0 16px,var(--paper) 16px 32px),
+    repeating-linear-gradient(0deg,color-mix(in srgb,var(--raspberry) 70%,var(--paper)) 0 16px,transparent 16px 32px);
+  background-blend-mode:multiply;
+  box-shadow:0 6px 0 color-mix(in srgb,var(--chocolate) 18%,transparent);
+}
+html[data-theme='picnic'] .site-header{background:color-mix(in srgb,var(--paper) 80%,transparent);border-bottom:0}
+html[data-theme='picnic'] .hero{
+  grid-template-columns:1fr 1fr;gap:1.4rem;padding:1.6rem;
+  background:
+    repeating-linear-gradient(90deg,color-mix(in srgb,var(--raspberry) 18%,var(--paper)) 0 18px,var(--paper) 18px 36px),
+    repeating-linear-gradient(0deg,color-mix(in srgb,var(--raspberry) 18%,var(--paper)) 0 18px,var(--paper) 18px 36px);
+  border:6px solid var(--paper);
+}
+html[data-theme='picnic'] .menu-card,html[data-theme='picnic'] .shot,html[data-theme='picnic'] .theme-shot{
+  position:relative;background:var(--paper);border:.55rem solid var(--paper);box-shadow:2px 6px 14px color-mix(in srgb,var(--chocolate) 20%,transparent);
+}
+html[data-theme='picnic'] .menu-card:nth-child(1),html[data-theme='picnic'] .shot:nth-child(odd){transform:rotate(-2.2deg)}
+html[data-theme='picnic'] .menu-card:nth-child(2),html[data-theme='picnic'] .shot:nth-child(even){transform:rotate(2deg)}
+html[data-theme='picnic'] .menu-card:nth-child(3){transform:rotate(-1deg)}
+html[data-theme='picnic'] .menu-card::after,html[data-theme='picnic'] .shot::after{
+  content:'';position:absolute;top:-9px;left:38%;width:46px;height:16px;
+  background:color-mix(in srgb,var(--lemon) 55%,transparent);transform:rotate(-8deg);
+}
+html[data-theme='picnic'] .menu-card img{height:13rem}
+html[data-theme='picnic'] footer{
+  border:0;background:
+    repeating-linear-gradient(90deg,var(--raspberry) 0 16px,var(--paper) 16px 32px);
+  color:var(--paper);text-align:center;mix-blend-mode:multiply;
+}
+html[data-theme='picnic'] footer{color:var(--chocolate)}
+
+@media (max-width:840px){
+  html[data-theme='drip'] .hero,html[data-theme='picnic'] .hero,html[data-theme='pastrycase'] .hero{grid-template-columns:1fr}
+  html[data-theme='pastrycase'] .hero-photo{order:0}
+  html[data-theme='recipe'] .menu-card{flex-direction:column}
+  html[data-theme='recipe'] .menu-card img{width:100%;height:11rem;flex:auto}
+}
