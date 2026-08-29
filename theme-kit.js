@@ -114,6 +114,8 @@
     applyLogo(look.logo);
     save(look);
     syncBarHeight();
+    const now = document.getElementById("look-now");
+    if (now) now.textContent = look.design + " · " + look.palette + " · " + look.type + " · " + look.corners;
   }
 
   function fillLogoSelect() {
@@ -135,10 +137,12 @@
   for (const key of Object.keys(FIELDS)) {
     const el = document.getElementById(FIELDS[key]);
     if (!el) continue;
-    el.addEventListener("change", function () {
+    function onPick() {
       look = currentFromSelects();
       apply(look);
-    });
+    }
+    el.addEventListener("change", onPick);
+    el.addEventListener("input", onPick);
   }
 
   const copyBtn = document.getElementById("copy-look");
