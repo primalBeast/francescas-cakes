@@ -24,9 +24,9 @@ html[data-theme='linen'] .lede{margin-inline:auto;font-size:.95rem}
 html[data-theme='linen'] .hero-actions{justify-content:center}
 html[data-theme='linen'] .hero-photo{max-width:22rem;margin-inline:auto;box-shadow:none;border:0}
 html[data-theme='linen'] .hero-photo img{height:16rem;opacity:.92}
-html[data-theme='linen'] .menu-grid,.theme-grid,.mosaic{grid-template-columns:1fr;gap:1.8rem}
-html[data-theme='linen'] .menu-card,.shot,.order-panel,.note,.theme-shot{box-shadow:none;border:0;background:transparent}
-html[data-theme='linen'] .menu-card img,.theme-shot img,.shot img{height:14rem;opacity:.9}
+html[data-theme='linen'] .menu-grid,html[data-theme='linen'] .theme-grid,html[data-theme='linen'] .mosaic{grid-template-columns:1fr;gap:1.8rem}
+html[data-theme='linen'] .menu-card,html[data-theme='linen'] .shot,html[data-theme='linen'] .order-panel,html[data-theme='linen'] .note,html[data-theme='linen'] .theme-shot{box-shadow:none;border:0;background:transparent}
+html[data-theme='linen'] .menu-card img,html[data-theme='linen'] .theme-shot img,html[data-theme='linen'] .shot img{height:14rem;opacity:.9}
 html[data-theme='linen'] .section{padding:3.2rem 0}
 html[data-theme='linen'] .btn{box-shadow:none;letter-spacing:.16em;text-transform:uppercase;font-size:.68rem;padding:.7rem 1.1rem}
 html[data-theme='linen'] footer{text-align:center;border:0;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;padding:3rem 0}
@@ -107,7 +107,7 @@ html[data-theme='recipe'] .menu-card{
   background-image:linear-gradient(90deg,color-mix(in srgb,var(--raspberry) 35%,var(--paper)) 0 2px,transparent 2px);
 }
 html[data-theme='recipe'] .menu-card img{width:7.5rem;height:7.5rem;flex:0 0 7.5rem}
-html[data-theme='recipe'] .order-panel,.note,.shot{
+html[data-theme='recipe'] .order-panel,html[data-theme='recipe'] .note,html[data-theme='recipe'] .shot{
   background:var(--paper);border:1px solid color-mix(in srgb,var(--chocolate) 20%,transparent);
 }
 html[data-theme='recipe'] footer{max-width:42rem;margin-inline:auto;border-top:2px solid var(--chocolate);font-family:var(--font-display)}
@@ -188,11 +188,9 @@ html[data-theme='picnic'] .menu-card::after,html[data-theme='picnic'] .shot::aft
 }
 html[data-theme='picnic'] .menu-card img{height:13rem}
 html[data-theme='picnic'] footer{
-  border:0;background:
-    repeating-linear-gradient(90deg,var(--raspberry) 0 16px,var(--paper) 16px 32px);
-  color:var(--paper);text-align:center;mix-blend-mode:multiply;
+  border:0;background:repeating-linear-gradient(90deg,var(--raspberry) 0 16px,var(--paper) 16px 32px);
+  color:var(--chocolate);text-align:center;
 }
-html[data-theme='picnic'] footer{color:var(--chocolate)}
 
 @media (max-width:840px){
   html[data-theme='drip'] .hero,html[data-theme='picnic'] .hero,html[data-theme='pastrycase'] .hero{grid-template-columns:1fr}
