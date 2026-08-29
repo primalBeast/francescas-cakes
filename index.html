@@ -14,10 +14,12 @@
     <a class="logo" href="#top">Francesca’s <span>Cakes</span></a>
     <nav>
       <a href="#order">Order</a>
+      <a href="#gallery">Gallery</a>
       <a href="#portfolio">Portfolio</a>
       <a href="#about">About</a>
     </nav>
   </header>
+
   <main id="top">
     <section class="hero wrap">
       <div>
@@ -38,6 +40,7 @@
         </div>
       </aside>
     </section>
+
     <section class="section wrap" id="themes">
       <p class="eyebrow">Finishes, not extra flavors</p>
       <h2>Pick a mood. Same cake.</h2>
@@ -48,6 +51,7 @@
         <a class="theme-card fruit" href="#order" data-start="fruit"><strong>Pretend Fruit</strong><p>Piped or modeled. Never fresh fruit.</p></a>
       </div>
     </section>
+
     <section class="section wrap" id="order">
       <p class="eyebrow">Three taps</p>
       <h2>Flavor, size, finish.</h2>
@@ -58,6 +62,7 @@
           <span id="step-size">2 Size</span>
           <span id="step-finish">3 Finish</span>
         </div>
+
         <div id="stage-order" class="stage">
           <div id="choices" class="choice-grid"></div>
           <div class="order-footer">
@@ -72,6 +77,7 @@
             </div>
           </div>
         </div>
+
         <form id="stage-date" class="stage" hidden>
           <label for="pickup-date">Collection day</label>
           <select id="pickup-date" required></select>
@@ -84,6 +90,7 @@
             </div>
           </div>
         </form>
+
         <form id="stage-account" class="stage" hidden>
           <p>A name and email so this preview remembers you on this phone.</p>
           <label for="cust-name">Name</label>
@@ -95,6 +102,7 @@
             <button class="btn" type="submit">Continue to pay</button>
           </div>
         </form>
+
         <form id="stage-pay" class="stage" hidden>
           <p>Hi <span id="hello-name">there</span>. Looks real. Nothing is charged.</p>
           <label for="card-number">Card number</label>
@@ -115,11 +123,45 @@
             <button class="btn" type="submit">Pay</button>
           </div>
         </form>
+
         <div id="stage-done" class="stage confirm" hidden>
           <h3>You’re on the bake list.</h3>
           <div id="conf-body"></div>
           <p><button class="btn" type="button" id="new-order">Order another</button></p>
         </div>
+      </div>
+    </section>
+
+
+    <section class="section wrap" id="gallery">
+      <p class="eyebrow">Style, not the menu</p>
+      <h2>How a cake can look.</h2>
+      <p class="muted">Gallery only. The shop still sells three cakes: vanilla bean, dark chocolate, and lemon with raspberry jam.</p>
+      <div class="portfolio-grid style-grid">
+        <figure class="shot"><img data-b64="images/gallery-b64/040-cut.b64" alt="Layer cake with one slice cut"><figcaption>Inside</figcaption></figure>
+        <figure class="shot"><img data-b64="images/gallery-b64/041-funfetti.b64" alt="Semi-naked funfetti cake"><figcaption>Sprinkle</figcaption></figure>
+        <figure class="shot"><img data-b64="images/gallery-b64/069-drip.b64" alt="Tan cake with chocolate drip"><figcaption>Drip</figcaption></figure>
+        <figure class="shot"><img data-b64="images/gallery-b64/091-yellow.b64" alt="Pale yellow vintage buttercream cake"><figcaption>Yellow</figcaption></figure>
+        <figure class="shot"><img data-b64="images/gallery-b64/095-floral.b64" alt="Lavender cake with piped flowers"><figcaption>Floral</figcaption></figure>
+        <figure class="shot"><img data-b64="images/gallery-b64/208-peach-roses.b64" alt="Cream cake with peach roses"><figcaption>Peach roses</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section wrap" id="birthday-gallery">
+      <p class="eyebrow">Birthday</p>
+      <h2>A birthday finish on a real cake.</h2>
+      <p class="muted">Same three flavors. This is a chocolate cake in a birthday finish, not a fourth SKU.</p>
+      <div class="portfolio-grid">
+        <figure class="shot"><img data-b64="images/gallery-b64/058-chocolate-birthday.b64" alt="Chocolate birthday cake with gold Happy Birthday topper"><figcaption>Birthday chocolate</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="section wrap" id="custom">
+      <p class="eyebrow">Custom writing</p>
+      <h2>Piped words, not a menu item.</h2>
+      <p class="muted">Not for order. A one-off. Not a product card.</p>
+      <div class="portfolio-grid">
+        <figure class="shot"><img data-b64="images/gallery-b64/130-teal-custom.b64" alt="Custom piped teal writing cake"><figcaption>Custom · not for sale</figcaption></figure>
       </div>
     </section>
     <section class="section wrap" id="portfolio">
@@ -128,23 +170,14 @@
       <p class="muted">Show work Francesca has already baked. These are not for the three-tap order.</p>
       <div class="portfolio-grid">
         <figure class="shot">
-          <svg viewBox="0 0 400 280" role="img" aria-label="Sculpted cream harp-seal cake, portfolio only">
-            <rect width="400" height="280" fill="#efe4d2"/>
-            <ellipse cx="200" cy="248" rx="120" ry="16" fill="#e0c9a4"/>
-            <ellipse cx="200" cy="168" rx="92" ry="78" fill="#fff6ea"/>
-            <ellipse cx="132" cy="232" rx="28" ry="12" fill="#fff6ea"/>
-            <ellipse cx="268" cy="232" rx="28" ry="12" fill="#fff6ea"/>
-            <circle cx="178" cy="150" r="7" fill="#1a120c"/>
-            <circle cx="222" cy="150" r="7" fill="#1a120c"/>
-            <ellipse cx="200" cy="168" rx="7" ry="6" fill="#1a120c"/>
-            <ellipse cx="200" cy="180" rx="6" ry="4" fill="#e8a0a8"/>
-          </svg>
+          <img id="seal-photo" src="images/portfolio/seal-cake.jpg" alt="Sculpted cream harp-seal cake on wood, no people" />
           <figcaption><span class="pill">Past work</span> Harp seal · sculpted, not a SKU</figcaption>
         </figure>
         <div class="empty-shot"><span>More stills landing soon</span></div>
         <div class="empty-shot"><span>Fondant stays here, not on the order grid</span></div>
       </div>
     </section>
+
     <section class="section wrap about" id="about">
       <div>
         <p class="eyebrow">The baker</p>
@@ -158,7 +191,9 @@
       </aside>
     </section>
   </main>
+
   <footer class="wrap">Francesca’s Cakes · London, Ontario · preview shop</footer>
+  <script src="gallery.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
