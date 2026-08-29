@@ -1,0 +1,108 @@
+/* wabi — quiet paper, thin lines, lots of air, stone + cream */
+html[data-theme="wabi"] {
+  --font-serif: "Newsreader", "Times New Roman", serif;
+  --font-sans: "Figtree", sans-serif;
+  --font-display: "Newsreader", serif;
+  --radius: 0.15rem;
+  --radius-btn: 0.15rem;
+  --radius-photo: 0.15rem;
+  --shadow: none;
+}
+html[data-theme="wabi"] body {
+  background: var(--paper);
+  color: var(--chocolate);
+}
+html[data-theme="wabi"] .site-header {
+  background: var(--paper);
+  border-bottom: 1px solid color-mix(in srgb, var(--chocolate) 18%, transparent);
+}
+html[data-theme="wabi"] .wrap {
+  width: min(980px, calc(100% - 3rem));
+}
+html[data-theme="wabi"] .hero {
+  grid-template-columns: 1fr;
+  max-width: 36rem;
+  gap: 2.8rem;
+  padding: 4.5rem 0 3rem;
+}
+html[data-theme="wabi"] h1 {
+  font-weight: 300;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+}
+html[data-theme="wabi"] h1 em { font-style: italic; color: var(--malt); }
+html[data-theme="wabi"] h2 { font-weight: 300; }
+html[data-theme="wabi"] .section { padding: 4.2rem 0; }
+html[data-theme="wabi"] .hero-photo,
+html[data-theme="wabi"] .menu-card,
+html[data-theme="wabi"] .shot,
+html[data-theme="wabi"] .theme-shot,
+html[data-theme="wabi"] .order-panel,
+html[data-theme="wabi"] .note {
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--chocolate) 16%, transparent);
+  background: var(--paper);
+}
+html[data-theme="wabi"] .btn {
+  box-shadow: none;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+html[data-theme="wabi"] .eyebrow {
+  letter-spacing: 0.22em;
+  font-weight: 500;
+}
+
+/* carnival — maximal birthday, dots, playful, still a cake shop */
+html[data-theme="carnival"] {
+  --font-serif: "Fredoka", "Figtree", sans-serif;
+  --font-sans: "Fredoka", "Figtree", sans-serif;
+  --font-display: "Fredoka", sans-serif;
+  --radius: 1.8rem;
+  --radius-btn: 999px;
+  --radius-photo: 1.8rem;
+  --shadow: 0 12px 0 color-mix(in srgb, var(--raspberry) 55%, var(--chocolate));
+}
+html[data-theme="carnival"] body {
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(circle at 10px 10px, var(--raspberry) 2.1px, transparent 2.3px),
+    radial-gradient(circle at 32px 28px, var(--lemon) 2.4px, transparent 2.6px),
+    radial-gradient(circle at 50px 12px, var(--chocolate) 1.5px, transparent 1.7px);
+  background-size: 56px 56px;
+}
+html[data-theme="carnival"] .hero {
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+html[data-theme="carnival"] h1 {
+  font-weight: 600;
+  line-height: 0.95;
+}
+html[data-theme="carnival"] h1 em {
+  color: var(--raspberry);
+  font-style: normal;
+}
+html[data-theme="carnival"] .menu-card:nth-child(1) { transform: rotate(-1.4deg); }
+html[data-theme="carnival"] .menu-card:nth-child(2) { transform: rotate(1.1deg); }
+html[data-theme="carnival"] .menu-card:nth-child(3) { transform: rotate(-0.7deg); }
+html[data-theme="carnival"] .menu-card:hover { transform: rotate(0deg) translateY(-4px); }
+html[data-theme="carnival"] .menu-card,
+html[data-theme="carnival"] .shot,
+html[data-theme="carnival"] .order-panel {
+  border: 3px solid var(--chocolate);
+  box-shadow: 0 10px 0 var(--raspberry);
+}
+html[data-theme="carnival"] .btn {
+  border: 3px solid var(--chocolate);
+  box-shadow: 0 5px 0 var(--lemon);
+}
+html[data-theme="carnival"] .pill {
+  background: var(--raspberry);
+  color: var(--paper);
+}
+
+@import url("theme-kit-extras.css");
