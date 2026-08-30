@@ -132,13 +132,13 @@ html {
 }
 
 #look-logo-preview {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   background: #111;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  flex: 0 0 36px;
+  flex: 0 0 44px;
 }
 
 #look-logo-preview[hidden] { display: none; }
@@ -155,6 +155,8 @@ html {
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
 #brand-logo {
@@ -165,6 +167,36 @@ html {
 }
 
 #brand-logo[hidden] { display: none; }
+
+html[data-logosize="small"] #brand-logo { width:40px; height:40px; flex-basis:40px; }
+html[data-logosize="big"] #brand-logo { width:88px; height:88px; flex-basis:88px; }
+html[data-logosize="giant"] #brand-logo { width:132px; height:132px; flex-basis:132px; }
+html[data-titlesize="small"] .logo { font-size: 1.2rem; }
+html[data-titlesize="big"] .logo { font-size: clamp(1.8rem, 3vw, 2.4rem); }
+html[data-titlesize="giant"] .logo { font-size: clamp(2.6rem, 6vw, 4.2rem); letter-spacing:-0.04em; }
+
+html[data-titlesize="big"] .site-header,
+html[data-logosize="big"] .site-header {
+  flex-wrap: wrap;
+  padding-block: 1.05rem;
+  row-gap: 0.55rem;
+}
+html[data-titlesize="giant"] .site-header,
+html[data-logosize="giant"] .site-header {
+  flex-wrap: wrap;
+  padding-block: 1.35rem;
+  row-gap: 0.7rem;
+}
+
+.shop-banner-3,
+.layout-marquee,
+.layout-masthead,
+.layout-curtain-l,
+.layout-curtain-r,
+.company-title {
+  display: none;
+  pointer-events: none;
+}
 
 /* Apply radius tokens over hardcoded styles.css radii */
 .hero-photo,
