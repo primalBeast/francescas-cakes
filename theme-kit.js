@@ -8,7 +8,9 @@
     density: "comfy",
     photos: "airy",
     buttons: "filled",
-    logo: "wordmark"
+    logo: "wordmark",
+    titlesize: "big",
+    logosize: "big"
   };
 
   const FIELDS = {
@@ -19,7 +21,9 @@
     density: "look-density",
     photos: "look-photos",
     buttons: "look-buttons",
-    logo: "look-logo"
+    logo: "look-logo",
+    titlesize: "look-titlesize",
+    logosize: "look-logosize"
   };
 
   const ATTR = {
@@ -30,7 +34,9 @@
     density: "density",
     photos: "photos",
     buttons: "buttons",
-    logo: "logo"
+    logo: "logo",
+    titlesize: "titlesize",
+    logosize: "logosize"
   };
 
   function load() {
